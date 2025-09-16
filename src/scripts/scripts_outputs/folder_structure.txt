@@ -4,12 +4,19 @@ src/
 │   │   ├── Footer                    
 │   │   ├── Hero                      
 │   │   └── Navbar                    
+│   ├── data                               
+│   │   └── seo                    
+│   │       ├── seo.js                      
+│   │       └── seo.json                    
 │   ├── favicon.ico                        
 │   ├── globals.css                        
 │   ├── layout.js                          
 │   ├── page.js                            
 │   ├── page.module.css                    
-│   └── styles                             
+│   ├── projects                           
+│   │   └── page.js                    
+│   └── resume                             
+│       └── page.js                    
 └── scripts                    
     ├── generateFolderStructure.js                    
     └── scripts_outputs                               

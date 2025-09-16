@@ -1,0 +1,10 @@
+{
+  "/": {
+    "title": "Yogesh YKG - My Website",
+    "description": "Welcome to the homepage of My Website."
+  },
+  "/about": {
+    "title": "About | Yogesh YKG",
+    "description": "Learn more about My Website and our mission."
+  }
+}
