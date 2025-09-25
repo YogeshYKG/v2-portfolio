@@ -1,9 +1,19 @@
 src/
 ├── app                        
 │   ├── components                         
-│   │   ├── Footer                    
-│   │   ├── Hero                      
-│   │   └── Navbar                    
+│   │   ├── footer                    
+│   │   ├── hero                      
+│   │   ├── navbar                    
+│   │   │   ├── Navbar.jsx                           
+│   │   │   └── Navbar.module.css                    
+│   │   └── svg                       
+│   │       ├── Icons                       
+│   │       │   ├── CodePenIcon.jsx                      
+│   │       │   ├── GitHubIcon.jsx                       
+│   │       │   ├── InstagramIcon.jsx                    
+│   │       │   ├── LineIcon.jsx                         
+│   │       │   └── LinkedinIcon.jsx                     
+│   │       └── index.js                    
 │   ├── data                               
 │   │   └── seo                    
 │   │       ├── seo.js                      

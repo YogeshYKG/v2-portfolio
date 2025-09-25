@@ -1,0 +1,15 @@
+.aboutPara{
+
+}
+
+.hyperlink{
+    all: unset;
+    color: var(--text-slate);
+    cursor: pointer;
+}
+
+.hyperlink:hover{
+    all: unset;
+    color: var(--text-green);
+    cursor: pointer;
+}

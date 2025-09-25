@@ -1,0 +1,43 @@
+.navLinks {
+  display: flex;
+  gap: 0px;
+  flex-direction: column;
+  padding: 4rem 0;
+}
+
+.navItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.iconWrapper {
+  display: inline-block;
+  transform: scaleX(0.5); /* start smaller */
+  transform-origin: left;
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+  color: var(--text-slate-muted); /* default muted */
+}
+
+.iconWrapper.active {
+  color: var(--text-slate); /* active/hovered */
+  transform: scaleX(1); /* grow smoothly */
+}
+
+.labelMuted {
+  margin-left: -8px;
+  font-size: small;
+  color: var(--text-slate-muted);
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out,
+    font-size 0.2s ease-in-out;
+}
+
+.labelActive {
+  margin-left: -8px;
+  font-size: medium;
+  color: var(--text-slate);
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out,
+    font-size 0.2s ease-in-out;
+  transform: translateX(24px);
+}
