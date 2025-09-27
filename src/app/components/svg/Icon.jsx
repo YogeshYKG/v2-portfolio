@@ -9,6 +9,16 @@ import {
   MailIcon,
   ArrowIcon,
   ClipIcon,
+  ErrorIcon,
+  ChatbotIcon,
+  PlaystoreIcon,
+  LanguageIcon,
+  UserAddIcon,
+  GlobeIcon,
+  ConfiguratorIcon,
+  CurrencyExchangeIcon,
+  TimerIcon,
+  BugIcon,
 } from "./index";
 
 const icons = {
@@ -20,6 +30,16 @@ const icons = {
   mail: MailIcon,
   arrow: ArrowIcon,
   clip: ClipIcon,
+  error: ErrorIcon,
+  chatbot: ChatbotIcon,
+  playstore: PlaystoreIcon,
+  language: LanguageIcon,
+  leadcapture: UserAddIcon,
+  globe: GlobeIcon,
+  configurator: ConfiguratorIcon,
+  currency: CurrencyExchangeIcon,
+  timer: TimerIcon,
+  bug: BugIcon,
 };
 
 export default function Icon({

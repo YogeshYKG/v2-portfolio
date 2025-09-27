@@ -43,14 +43,14 @@
 }
 
 /* Navbar.module.css or SocialIcons.module.css */
-.socialIcons span {
+.socialIcons a {
   display: inline-flex;
   cursor: pointer;
   color: var(--text-slate-muted); /* default muted */
   transition: color 0.3s ease;
 }
 
-.socialIcons span:hover {
+.socialIcons a:hover {
   color: var(--text-slate); /* hover slate */
 }
 
@@ -99,6 +99,7 @@
 }
 
 .mainContentProjectSection {
+  margin-top: 8rem;
 }
 .mainContentProjectSection .mainSectionHeading {
   margin: 0.5rem;
@@ -164,6 +165,7 @@
   .mainContent {
     padding: unset;
     margin-top: 6rem;
+    margin-bottom: 12rem;
     flex: 4;
   }
 

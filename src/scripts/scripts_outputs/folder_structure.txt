@@ -1,31 +1,50 @@
 src/
 ├── app                        
-│   ├── components                         
-│   │   ├── footer                    
-│   │   ├── hero                      
-│   │   ├── navbar                    
+│   ├── components                              
+│   │   ├── about                         
+│   │   │   ├── About.jsx                           
+│   │   │   └── About.module.css                    
+│   │   ├── experience                    
+│   │   │   ├── Experience.jsx                           
+│   │   │   ├── Experience.module.css                    
+│   │   │   └── ExperienceCard.jsx                       
+│   │   ├── footer                        
+│   │   ├── navbar                        
 │   │   │   ├── Navbar.jsx                           
 │   │   │   └── Navbar.module.css                    
-│   │   └── svg                       
+│   │   ├── projects                      
+│   │   │   └── Projects.jsx                    
+│   │   └── svg                           
+│   │       ├── Icon.jsx                    
 │   │       ├── Icons                       
-│   │       │   ├── CodePenIcon.jsx                      
-│   │       │   ├── GitHubIcon.jsx                       
+│   │       │   ├── ArrowIcon.jsx                        
+│   │       │   ├── ClipIcon.jsx                         
+│   │       │   ├── CodepenIcon.jsx                      
+│   │       │   ├── ErrorIcon.jsx                        
+│   │       │   ├── GithubIcon.jsx                       
 │   │       │   ├── InstagramIcon.jsx                    
 │   │       │   ├── LineIcon.jsx                         
-│   │       │   └── LinkedinIcon.jsx                     
+│   │       │   ├── LinkedinIcon.jsx                     
+│   │       │   └── MailIcon.jsx                         
 │   │       └── index.js                    
-│   ├── data                               
-│   │   └── seo                    
+│   ├── data                                    
+│   │   ├── homepage                    
+│   │   │   ├── about.js                         
+│   │   │   ├── experience.js                    
+│   │   │   └── userInfo.js                      
+│   │   └── seo                         
 │   │       ├── seo.js                      
 │   │       └── seo.json                    
-│   ├── favicon.ico                        
-│   ├── globals.css                        
-│   ├── layout.js                          
-│   ├── page.js                            
-│   ├── page.module.css                    
-│   ├── projects                           
+│   ├── favicon.ico                             
+│   ├── globals.css                             
+│   ├── layout.js                               
+│   ├── not-found.js                            
+│   ├── not-found.module.css                    
+│   ├── page.js                                 
+│   ├── page.module.css                         
+│   ├── projects                                
 │   │   └── page.js                    
-│   └── resume                             
+│   └── resume                                  
 │       └── page.js                    
 └── scripts                    
     ├── generateFolderStructure.js                    

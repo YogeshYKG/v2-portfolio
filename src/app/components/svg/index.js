@@ -6,3 +6,14 @@ export { default as InstagramIcon } from "./Icons/InstagramIcon";
 export { default as MailIcon } from "./Icons/MailIcon";
 export { default as ArrowIcon } from "./Icons/ArrowIcon";
 export { default as ClipIcon } from "./Icons/ClipIcon";
+export { default as ErrorIcon } from "./Icons/ErrorIcon";
+export { default as ChatbotIcon } from "./Icons/ChatbotIcon";
+export { default as PlaystoreIcon } from "./Icons/PlaystoreIcon";
+export { default as LanguageIcon } from "./Icons/LanguageIcon";
+export { default as UserAddIcon } from "./Icons/UserAddIcon";
+
+export { default as GlobeIcon } from "./Icons/GlobeIcon";
+export { default as ConfiguratorIcon } from "./Icons/ConfiguratorIcon";
+export { default as CurrencyExchangeIcon } from "./Icons/CurrencyExchangeIcon";
+export { default as TimerIcon } from "./Icons/TimerIcon";
+export { default as BugIcon } from "./Icons/BugIcon";

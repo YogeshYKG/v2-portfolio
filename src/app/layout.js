@@ -39,6 +39,9 @@ export const generateMetadata = async ({ params }) => {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/svg/favicon.svg" type="iamge/svg+xml" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable}`}
         style={defaultCssVariables}

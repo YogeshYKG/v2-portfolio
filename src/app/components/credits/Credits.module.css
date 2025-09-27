@@ -1,0 +1,41 @@
+.creditsContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.creditsContent a {
+    all: unset;
+    color: var(--text-slate);
+    cursor: pointer;
+}
+
+.creditsContent a:hover {
+    all: unset;
+    color: var(--text-green);
+    cursor: pointer;
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  /* styles for ≥640px */
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  /* styles for ≥1024px */
+
+  .creditsContentCard {
+    flex-direction: row;
+    width: 100%;
+    padding: 1rem 1rem 1rem 0.5rem;
+    left: unset;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1536px) {
+  /* styles for ≥1536px */
+}
