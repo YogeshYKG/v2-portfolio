@@ -1,0 +1,17 @@
+.cursorOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+
+  background: radial-gradient(
+    circle at var(--x, 0) var(--y, 0),
+    rgba(255, 255, 255, 0.05) 0%,
+    transparent 60%
+  );
+
+  transition: background 0.1s ease-out;
+}

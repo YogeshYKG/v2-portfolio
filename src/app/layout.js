@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 
 import { getSeoMetaData } from "@/app/data/seo/seo";
+import CursorOverlay from "@/app/components/cursorOverlay/CursorOverlay";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,6 +47,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable}`}
         style={defaultCssVariables}
       >
+        <CursorOverlay />
         {children}
       </body>
     </html>
