@@ -1,13 +1,13 @@
 const userInfo = {
-  userName: "Yogesh Gupta",
-  userTitle: "Full Stack Engineer",
+  userName: "Ankit Gupta",
+  userTitle: "Full Stack Developer",
   userProfDesc:
-    "I craft end-to-end digital solutions that balance user experience, performance, and business impact.",
+    "I build scalable web applications and optimize system performance using modern frameworks, cloud technologies, and AI-driven solutions.",
   links: {
-    github: "https://github.com/YogeshYKG",
-    linkedin: "https://www.linkedin.com/in/yogeshkrgupta/",
-    codepen: "https://codepen.io/YogeshYKG",
-    mail: "mailto:guptayogesh484.dev@gmail.com",
+    github: "https://github.com/ankitgupta97481",
+    linkedin: "https://www.linkedin.com/in/ankitgupta97481/",
+    codepen: null,
+    mail: "mailto:ankitgupta97481@gmail.com",
     instagram: null,
   },
 };

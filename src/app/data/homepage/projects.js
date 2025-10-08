@@ -1,70 +1,38 @@
-const blueberryTravels = {
-  thumbnail: "/thumbnails/BBT_thumbnail.webp",
-  title: "Blueberry Travels Website",
-  projectLink: "http://blueberrygroupnew.techbinary.net/",
+const quizApp = {
+  thumbnail: "/thumbnails/quiz_app_thumbnail.webp",
+  title: "Quiz Web Application",
+  projectLink: "https://github.com/ankitgupta97481/quiz-app",
   contributions:
-    "Unified 30+ branch sites into one, cutting infra costs; integrated 12+ SaaS tools, SEO, multilingual, chatbot, and lead capture.",
-  techStack: ["React", "Next.js", "Node", "Express.js", "Azure", "MySQL"],
+    "Built a full-stack quiz management system with secure login, quiz creation, and unique access codes. Developed dynamic UI/UX with React and Tailwind CSS, and implemented secure backend via Spring Boot REST APIs with user authentication and quiz data management.",
+  techStack: ["React", "Spring Boot", "Tailwind CSS", "REST APIs", "MySQL", "Java"],
   milestones: [
-    { icon: "globe", label: "30+ Countries", link: "/explore-bbt" },
-    {
-      icon: "playstore",
-      label: "4K+ Downloads",
-      link: "https://play.google.com/store/apps/details?id=com.blueberry.travels",
-    },
-    { icon: "clip", label: "12+ SaaS", link: "/explore-bbt/uae" }, // using clip as generic "work/tool"
-    { icon: "language", label: "5+ Languages", link: null },
-    { icon: "chatbot", label: "Chatbot", link: null },
-    { icon: "leadcapture", label: "Lead Capture", link: null },
+    { icon: "clip", label: "GitHub Repository", link: "https://github.com/ankitgupta97481/quiz-app" },
+    { icon: "users", label: "User Authentication", link: null },
+    { icon: "clip", label: "Quiz Management", link: null },
+    { icon: "code", label: "RESTful APIs", link: null },
+    { icon: "globe", label: "Responsive Design", link: null },
   ],
 };
 
-const vdb = {
-  thumbnail: "/thumbnails/VDB_thumbnail.webp",
-  title: "Virtual Diamond Boutique (VDB) Marketplace",
-  projectLink: "https://vdbapp.com/",
+const satelliteClassification = {
+  thumbnail: "/thumbnails/satellite_thumbnail.webp",
+  title: "Satellite Image Classification",
+  projectLink: "https://github.com/ankitgupta97481/satellite-image-classification",
   contributions:
-    "Built a cross-platform jewelry marketplace with customizable signup flows, 800+ filters, and a dynamic 3D configurator supporting 1200+ stone-ring combinations, previews, and seamless checkout — boosting conversions.",
-  techStack: ["Angular", "React", "Node", "MongoDB", "Sentry", "AWS"],
+    "Developed a deep learning model for land cover classification on the EuroSAT dataset (27,000 images). Achieved over 99% accuracy in classifying 10 distinct land cover types using a fine-tuned Wide ResNet-50 model. Engineered data handling pipelines and utilized PyTorch for efficient processing and training, showcasing backend and machine learning framework skills.",
+  techStack: ["Python", "PyTorch", "CNN", "Wide-ResNet50-2", "Google Colab", "NumPy", "Pandas"],
   milestones: [
-    { icon: "clip", label: "600+ B2B Clients", link: "/explore-bbt" }, // using clip for business
-    {
-      icon: "playstore",
-      label: "4K+ Downloads",
-      link: "https://play.google.com/store/apps/details?id=com.blueberry.travels",
-    },
-    { icon: "configurator", label: "Ring Configurator", link: null },
-    { icon: "language", label: "18+ Languages", link: null },
-    { icon: "currency", label: "Currency Converter", link: null },
-    { icon: "clip", label: "White-Label Support", link: null }, // clip again for generic tool/business
-  ],
-};
-
-const hrms = {
-  thumbnail: "/thumbnails/HRMS_thumbnail.webp",
-  title: "Enhanced Internal HRMS",
-  projectLink: "https://raj.nic.in/",
-  contributions:
-    "Automated recruitment, attendance, and travel workflows (3k+ employees) with WhatsApp API + email triggers — reducing manual processing by 40%.",
-  techStack: ["Angular", "Node", "MySQL", "Jenkins", "Azure"],
-  milestones: [
-    {
-      icon: "clip",
-      label: "Project Repository",
-      link: "https://github.com/YogeshYKG/NIC-Intern-Work",
-    },
-    { icon: "timer", label: "Workflow Automation", link: null }, // using timer for efficiency/automation
-    { icon: "users", label: "3K+ Employees", link: null }, // you don't have a users icon, clip could also work
-    { icon: "chatbot", label: "WhatsApp Integration", link: null }, // closest is chatbot
-    { icon: "mail", label: "Email Triggers", link: null },
-    { icon: "timer", label: "40% Manual Reduction", link: null }, // timer again for efficiency
+    { icon: "clip", label: "GitHub Repository", link: "https://github.com/ankitgupta97481/satellite-image-classification" },
+    { icon: "clip", label: "99% Accuracy", link: null },
+    { icon: "clip", label: "27,000 Images", link: null },
+    { icon: "clip", label: "10 Land Cover Types", link: null },
+    { icon: "clip", label: "Deep Learning Model", link: null },
   ],
 };
 
 export const projectContent = () => {
   return {
-    blueberryTravels,
-    vdb,
-    hrms,
+    quizApp,
+    satelliteClassification,
   };
 };

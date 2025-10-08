@@ -7,10 +7,10 @@ import styles from "./Projects.module.css";
 import Icon from "../svg/Icon";
 
 const Projects = () => {
-  const { blueberryTravels, vdb, hrms } = projectContent();
+  const { quizApp, satelliteClassification } = projectContent();
   const [hoveredIdx, setHoveredIdx] = useState(null);
 
-  const cards = [blueberryTravels, vdb, hrms];
+  const cards = [quizApp, satelliteClassification];
   return (
     <div className={styles.experienceContent}>
       {cards.map((cardDetail, idx) => {
@@ -31,7 +31,7 @@ const Projects = () => {
         );
       })}
 
-      <div className={styles.ViewFullResume}>
+      {/* <div className={styles.ViewFullResume}>
         <a
           href="/archive/projects"
           className={`${styles.LinkTitle}`}
@@ -41,7 +41,7 @@ const Projects = () => {
           <span>View Projects Archive</span>
           <Icon name="arrow" size={20} color="currentColor" />
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };

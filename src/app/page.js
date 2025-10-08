@@ -82,9 +82,9 @@ export default function Home() {
             <Projects />
           </section>
 
-          <section id="projects" className={styles.mainContentProjectSection}>
+          {/* <section id="projects" className={styles.mainContentProjectSection}>
             <Credits />
-          </section>
+          </section> */}
 
           
         </main>

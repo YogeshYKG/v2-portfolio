@@ -7,10 +7,10 @@ import styles from "./Experience.module.css";
 import Icon from "../svg/Icon";
 
 const Experience = () => {
-  const { techbinary, vdb, nic } = experienceContent();
+  const { elasticrun, nic } = experienceContent();
   const [hoveredIdx, setHoveredIdx] = useState(null);
 
-  const cards = [techbinary, vdb, nic];
+  const cards = [elasticrun, nic];
 
   return (
     <div className={styles.experienceContent}>
@@ -34,7 +34,7 @@ const Experience = () => {
 
       <div className={styles.ViewFullResume}>
         <a
-          href="/resume.pdf"
+          href="https://drive.google.com/file/d/1NFgexoSufcb7OrgQxY0euuh4QC5IliXs/view?usp=drive_link"
           className={`${styles.LinkTitle}`}
           target="_blank"
           rel="noopener noreferrer"

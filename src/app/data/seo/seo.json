@@ -1,10 +1,10 @@
 {
   "/": {
-    "title": "Yogesh YKG - My Website",
-    "description": "Welcome to the homepage of My Website."
+    "title": "Ankit Gupta - Full Stack Developer",
+    "description": "Portfolio of Ankit Gupta, Full Stack Developer specializing in Frappe, Spring Boot, React, Azure, and AI/ML with PyTorch. Experienced in building scalable web applications and optimizing system performance."
   },
   "/about": {
-    "title": "About | Yogesh YKG",
-    "description": "Learn more about My Website and our mission."
+    "title": "About | Ankit Gupta",
+    "description": "Learn more about Ankit Gupta, a Full Stack Developer with expertise in modern frameworks, cloud technologies, and AI-driven solutions."
   }
 }
