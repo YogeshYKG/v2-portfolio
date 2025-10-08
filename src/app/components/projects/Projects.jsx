@@ -31,7 +31,7 @@ const Projects = () => {
         );
       })}
 
-      <div className={styles.ViewFullResume}>
+      {/* <div className={styles.ViewFullResume}>
         <a
           href="/archive/projects"
           className={`${styles.LinkTitle}`}
@@ -41,7 +41,7 @@ const Projects = () => {
           <span>View Projects Archive</span>
           <Icon name="arrow" size={20} color="currentColor" />
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };
