@@ -31,17 +31,16 @@ const Projects = () => {
         );
       })}
 
-      {/* <div className={styles.ViewFullResume}>
+      <div className={styles.ViewFullResume}>
         <a
-          href="/archive/projects"
+          href="/archive"
           className={`${styles.LinkTitle}`}
-          target="_blank"
           rel="noopener noreferrer"
         >
           <span>View Projects Archive</span>
           <Icon name="arrow" size={20} color="currentColor" />
         </a>
-      </div> */}
+      </div>
     </div>
   );
 };

@@ -28,14 +28,16 @@ const ExperienceCard = ({ cardDetail, isHovered }) => {
     <>
       <div className={styles.leftcol}>
         <div className={styles.tenure}>{tenure}</div>
-        <button
-          className={`${styles.caseStudySlug} ${
-            isHovered ? styles.active : ""
-          }`}
-          onClick={() => handleCardClick(caseStudySlug)}
-        >
-          View Case-Study
-        </button>
+        {caseStudySlug && (
+          <button
+            className={`${styles.caseStudySlug} ${
+              isHovered ? styles.active : ""
+            }`}
+            onClick={() => handleCardClick(caseStudySlug)}
+          >
+            View Case-Study
+          </button>
+        )}
       </div>
       <div className={styles.rightcol}>
         {/* Role + Employer */}

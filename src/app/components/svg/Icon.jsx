@@ -48,8 +48,9 @@ export default function Icon({
   color = "currentColor",
   width = 24,
   height = 24,
+  rotate = null,
 }) {
   const SvgIcon = icons[name];
   if (!SvgIcon) return null;
-  return <SvgIcon size={size} color={color} width={width} height={height} />;
+  return <SvgIcon size={size} color={color} width={width} height={height} rotate={rotate} />;
 }

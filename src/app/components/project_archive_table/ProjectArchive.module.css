@@ -1,0 +1,134 @@
+/* ==========================
+   Shared Styles (Header + Rows)
+========================== */
+.tableWrapper {
+  display: flex;
+  flex-direction: column;
+  max-height: 70vh; /* scrollable table height */
+  overflow-y: auto;
+  border-radius: 8px;
+  position: relative;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 80px 0.9fr 1fr 1.7fr 1fr; /* default desktop */
+  align-items: center;
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.8rem;
+  transition: grid-template-columns 0.3s ease, background 0.2s ease;
+}
+
+.tableHeader {
+  font-weight: 600;
+  color: var(--text-slate);
+  letter-spacing: 0.5px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  backdrop-filter: blur(6px);
+}
+
+.tableBody {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================
+   Cells
+========================== */
+.tableCell {
+  padding: 4px 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tableProjectCell {
+  color: var(--text-slate);
+}
+
+.col4item {
+  background: var(--shade-green);
+  color: var(--text-green);
+  padding: 3px 8px;
+  margin-right: 6px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.tableRow:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.tableCell a {
+  color: var(--text-slate-muted);
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+}
+
+.tableCell a:hover {
+  color: var(--text-green);
+}
+
+/* ==========================
+   Responsive Layouts
+========================== */
+
+/* ---------- Mobile (default) ----------
+   Only show col1 and col5
+-------------------------------------- */
+.tableRow {
+  grid-template-columns: 80px 1fr;
+}
+.tableCell:nth-child(2),
+.tableCell:nth-child(3),
+.tableCell:nth-child(4) {
+  display: none;
+}
+
+/* ---------- Tablet (≥640px) ----------
+   Show col1, col2, col3
+-------------------------------------- */
+@media (min-width: 640px) {
+  .tableRow {
+    grid-template-columns: 80px 1fr 1fr;
+  }
+  .tableCell:nth-child(2),
+  .tableCell:nth-child(3) {
+    display: block;
+  }
+  .tableCell:nth-child(4),
+  .tableCell:nth-child(5) {
+    display: none;
+  }
+}
+
+/* ---------- Desktop (≥1024px) ----------
+   Show all columns
+-------------------------------------- */
+@media (min-width: 1024px) {
+  .tableRow {
+    grid-template-columns: 80px 0.9fr 1fr 1.7fr 1fr;
+    font-size: 0.7rem;
+  }
+  .tableCell:nth-child(2),
+  .tableCell:nth-child(3),
+  .tableCell:nth-child(4),
+  .tableCell:nth-child(5) {
+    display: block; /* restores them inside the grid */
+  }
+}
+
+/* ---------- Large Screens (≥1536px) ----------
+   Optional tweaks for readability
+-------------------------------------- */
+@media (min-width: 1536px) {
+  .tableRow {
+    font-size: 0.8rem;
+  }
+}
