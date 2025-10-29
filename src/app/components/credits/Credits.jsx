@@ -6,7 +6,7 @@ const Credits = () => {
   return (
     <div className={styles.creditsContent}>
       <p>
-        Loosely designed in Figma with UI/UX guidance from{" "}
+        Losely designed in Figma with UI/UX guidance from{" "}
         <a
           href="https://www.linkedin.com/in/varun-patel-018a12208/"
           target="_blank"
