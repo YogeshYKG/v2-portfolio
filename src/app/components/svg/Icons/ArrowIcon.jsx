@@ -1,5 +1,5 @@
 "use client";
-const ArrowIcon = ({ size = 20, color = "currentColor", className = "" }) => {
+const ArrowIcon = ({ size = 20, color = "currentColor", rotate = null }) => {
   return (
     <svg
       width={size}
@@ -7,6 +7,11 @@ const ArrowIcon = ({ size = 20, color = "currentColor", className = "" }) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 23 24"
       fill={color}
+      style={{
+        transform: rotate ? `rotate(${rotate}deg)` : undefined,
+        transformOrigin: "center",
+        transition: "transform 0.2s ease",
+      }}
     >
       <path
         fillRule="evenodd"

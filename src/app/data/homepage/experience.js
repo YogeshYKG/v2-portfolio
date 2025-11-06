@@ -3,7 +3,7 @@ const techbinary = {
   role: "Fullstack Developer",
   employer: "Techbinary · Unit of Blueberry Groups",
   employerLink: "http://blueberrygroupnew.techbinary.net/",
-  caseStudySlug: "techbinary",
+  // caseStudySlug: "techbinary",
   contributions: 
     "At Techbinary, I scaled a role-based CRM to 5k+ DAU with 99.9% uptime, cutting task turnaround by 25%. I built reusable React/MUI libraries that reduced development time by 30%, optimized APIs and databases to handle 1M+ monthly requests with 250ms faster responses, launched a multilingual travel site that improved SEO and lead generation, and delivered an HRMS for 3k+ employees, automating workflows and saving 200+ hours per month.",
   techStack: [
@@ -21,7 +21,7 @@ const vdb = {
   role: "Consultant",
   employer: "Virtual Diamond Boutique (VDB)",
   employerLink: "https://vdbapp.com/",
-  caseStudySlug: "vdb",
+  // caseStudySlug: "vdb",
   contributions: 
     "At VDB, I architected a 3D jewelry configurator with 1200+ stone–ring combinations that boosted conversions, introduced micro-frontend architecture for modular development, and productized the signup module into a SaaS component adopted by 400+ B2B clients. I also built deep-linking and advanced search features, integrated secure Shopify storefront flows, and enhanced UI/UX with responsive filters and Sentry monitoring.",
   techStack: [
@@ -38,7 +38,7 @@ const nic = {
   role: "Database Architect",
   employer: "National Informatics Center (NIC)",
   employerLink: "https://raj.nic.in/",
-  caseStudySlug: "nic",
+  // caseStudySlug: "nic",
   contributions: 
     "During my internship at NIC, I designed and optimized relational database schemas in MySQL for internal government applications and developed basic web modules in PHP, HTML, and CSS, hosted locally with XAMPP.",
   techStack: [

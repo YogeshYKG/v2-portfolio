@@ -1,4 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+import bundleAnalyzer from "@next/bundle-analyzer";
 
-export default nextConfig;
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
+});
+
+const nextConfig = {
+  reactStrictMode: true,
+  images: {
+    domains: ["yourdomain.com"], // optional, for image optimization
+  },
+};
+
+export default withBundleAnalyzer(nextConfig);

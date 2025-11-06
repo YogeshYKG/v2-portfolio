@@ -1,10 +1,41 @@
 {
   "/": {
-    "title": "Yogesh YKG - My Website",
-    "description": "Welcome to the homepage of My Website."
+    "title": "Yogesh Gupta | Frontend and Fullstack Developer (React, Next.js, Node.js, MERN, MEAN)",
+    "description": "Fullstack Engineer with 3.5+ years of experience building scalable and SEO-friendly web applications. Expert in React, Next.js, Node.js, Express, and MongoDB — delivering high-performing dashboards, CRMs, and travel platforms with real business impact.",
+    "ogImage": "/og/home.png",
+    "canonical": "https://yourdomain.com/",
+    "noindex": false
   },
+
+  "/resume": {
+    "title": "Resume | Yogesh Gupta — Fullstack Developer (MERN, MEAN, React, Node.js)",
+    "description": "Download Yogesh Gupta’s resume — highlighting 3.5+ years of hands-on experience in React, Next.js, Node.js, and full-stack development. Proven ability to deliver responsive, performance-driven web products and modern frontends.",
+    "ogImage": "/og/resume.png",
+    "canonical": "https://yourdomain.com/resume.pdf",
+    "noindex": true
+  },
+
+  "/archive": {
+    "title": "Projects Archive | Yogesh Gupta — React and Node.js Developer",
+    "description": "Browse Yogesh Gupta’s project archive featuring fullstack and frontend web apps built using React, Next.js, Node.js, Express, and MongoDB. Includes UI experiments, SaaS dashboards, SEO tools, and 3D web experiences using Three.js and WebGL.",
+    "ogImage": "/og/archive.png",
+    "canonical": "https://yourdomain.com/archive",
+    "noindex": false
+  },
+
   "/about": {
-    "title": "About | Yogesh YKG",
-    "description": "Learn more about My Website and our mission."
+    "title": "About Yogesh Gupta | Frontend and Fullstack Engineer (MERN, MEAN, React)",
+    "description": "Yogesh Gupta is a passionate Frontend and Fullstack Engineer specializing in React, Next.js, and Node.js. With 3.5+ years of experience, he crafts scalable, clean, and maintainable web applications that blend performance with purpose.",
+    "ogImage": "/og/about.png",
+    "canonical": "https://yourdomain.com/about",
+    "noindex": false
+  },
+
+  "/contact": {
+    "title": "Contact | Yogesh Gupta — Frontend and Fullstack Developer",
+    "description": "Get in touch with Yogesh Gupta for freelance, contract, or full-time Frontend and Fullstack roles. Specialized in React, Next.js, Node.js, and performance-first web apps.",
+    "ogImage": "/og/contact.png",
+    "canonical": "https://yourdomain.com/contact",
+    "noindex": false
   }
 }
