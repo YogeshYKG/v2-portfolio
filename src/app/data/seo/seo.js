@@ -32,6 +32,7 @@ export function getSeoMetaData(pathname = "/") {
 
     // Return strictly serializable SEO metadata
     return {
+      metadataBase: new URL(HOST),
       title: pageData.title || DEFAULT.title,
       description: pageData.description || DEFAULT.description,
       openGraph: {
