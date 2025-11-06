@@ -7,7 +7,6 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   images: {
     domains: ["yourdomain.com"], // optional, for image optimization
   },
