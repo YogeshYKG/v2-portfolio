@@ -2,7 +2,6 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 
 import "./globals.css";
 
-import { getSeoMetaData } from "@/app/data/seo/seo";
 import CursorOverlay from "@/app/components/cursorOverlay/CursorOverlay";
 
 const geistSans = Geist({
@@ -30,18 +29,60 @@ const defaultCssVariables = {
   "--text-green": "rgba(94, 234, 182, 1)",
 };
 
-export const generateMetadata = async ({ params }) => {
-  const segments = params?.slug || [];
-  const pathname = "/" + segments.join("/");
-
-  return getSeoMetaData(pathname || "/");
-};
-
 export default function RootLayout({ children }) {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Yogesh Gupta",
+    jobTitle: "Frontend & Fullstack Developer",
+    url: "https://www.yogeshportfolio.in",
+    sameAs: [
+      "https://www.linkedin.com/in/yogeshkrgupta/",
+      "https://github.com/YogeshYKG",
+      "https://leetcode.com/u/user4816XH/",
+      "guptayogesh484.dev@gmail.com",
+    ],
+    knowsAbout: [
+      "React.js",
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "MERN Stack",
+      "MEAN Stack",
+      "JavaScript (ES6+)",
+      "TypeScript",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "Material UI (MUI)",
+      "RESTful APIs",
+      "JWT Authentication",
+      "Performance Optimization",
+      "SEO Optimization",
+      "Responsive Web Design",
+      "Web Accessibility (a11y)",
+      "Three.js",
+      "WebGL",
+      "Framer Motion",
+      "Redux",
+      "Git & GitHub",
+      "CI/CD Deployment",
+      "Project Architecture",
+      "Fullstack Web Development",
+      "UI/UX Implementation",
+      "Cross-Browser Compatibility",
+    ],
+  };
+
   return (
     <html lang="en">
       <head>
         <link rel="icon" href="/svg/favicon.svg" type="iamge/svg+xml" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable}`}

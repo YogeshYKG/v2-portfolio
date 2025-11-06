@@ -1,28 +1,42 @@
 src/
 ├── app                        
+│   ├── archive                                 
+│   │   ├── ArchiveComponent.js                    
+│   │   ├── page.js                                
+│   │   └── page.module.css                        
+│   ├── case-study                              
+│   │   ├── techbinary                    
+│   │   │   ├── page.js                            
+│   │   │   └── page.module.css                    
+│   │   └── vdb                           
+│   │       ├── page.js                            
+│   │       └── page.module.css                    
 │   ├── components                              
-│   │   ├── about                            
+│   │   ├── about                                    
 │   │   │   ├── About.jsx                           
 │   │   │   └── About.module.css                    
-│   │   ├── credits                          
+│   │   ├── credits                                  
 │   │   │   ├── Credits.jsx                           
 │   │   │   └── Credits.module.css                    
-│   │   ├── cursorOverlay                    
+│   │   ├── cursorOverlay                            
 │   │   │   ├── CursorOverlay.jsx                           
 │   │   │   └── CursorOverlay.module.css                    
-│   │   ├── experience                       
+│   │   ├── experience                               
 │   │   │   ├── Experience.jsx                           
 │   │   │   ├── Experience.module.css                    
 │   │   │   └── ExperienceCard.jsx                       
-│   │   ├── footer                           
-│   │   ├── navbar                           
+│   │   ├── footer                                   
+│   │   ├── navbar                                   
 │   │   │   ├── Navbar.jsx                           
 │   │   │   └── Navbar.module.css                    
-│   │   ├── projects                         
+│   │   ├── projects                                 
 │   │   │   ├── ProjectCard.jsx                        
 │   │   │   ├── Projects.jsx                           
 │   │   │   └── Projects.module.css                    
-│   │   └── svg                              
+│   │   ├── project_archive_table                    
+│   │   │   ├── ProjectArchive.jsx                           
+│   │   │   └── ProjectArchive.module.css                    
+│   │   └── svg                                      
 │   │       ├── Icon.jsx                    
 │   │       ├── Icons                       
 │   │       │   ├── ArrowIcon.jsx                               
@@ -45,6 +59,8 @@ src/
 │   │       │   └── UserAddIcon.jsx                             
 │   │       └── index.js                    
 │   ├── data                                    
+│   │   ├── archive                     
+│   │   │   └── projectArchive.js                    
 │   │   ├── homepage                    
 │   │   │   ├── about.js                         
 │   │   │   ├── experience.js                    
@@ -57,6 +73,7 @@ src/
 │   ├── layout.js                               
 │   ├── not-found.js                            
 │   ├── not-found.module.css                    
+│   ├── notFound.js                             
 │   ├── page.js                                 
 │   ├── page.module.css                         
 │   ├── projects                                

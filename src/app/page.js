@@ -10,6 +10,11 @@ import Credits from "./components/credits/Credits";
 import Icon from "@/app/components/svg/Icon";
 
 import userInfo from "./data/homepage/userInfo";
+import { getSeoMetaData } from "./data/seo/seo";
+
+export async function generateMetadata() {
+  return getSeoMetaData("/");
+}
 
 export default function Home() {
   const { userName, userTitle, userProfDesc, links } = userInfo;
