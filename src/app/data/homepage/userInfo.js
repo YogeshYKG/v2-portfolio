@@ -6,7 +6,7 @@ const userInfo = {
   links: {
     github: "https://github.com/YogeshYKG",
     linkedin: "https://www.linkedin.com/in/yogeshkrgupta/",
-    codepen: "https://codepen.io/YogeshYKG",
+    codepen: "https://codepen.io/codewithgyogesh",
     mail: "mailto:guptayogesh484.dev@gmail.com",
     instagram: null,
   },

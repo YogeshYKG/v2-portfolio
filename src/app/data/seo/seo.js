@@ -1,11 +1,11 @@
-// src/app/data/seo/seo.js
 import seoData from "./seo.json";
 
 const HOST = "https://www.yogeshportfolio.in";
 
 const DEFAULT = {
   title: "Yogesh Gupta | Frontend & Fullstack Developer",
-  description: "Fullstack Engineer with 3.5+ years of experience building scalable and SEO-friendly web applications.",
+  description:
+    "Fullstack Engineer with 3.5+ years of experience building scalable and SEO-friendly web applications.",
   ogImage: "/og/home.png",
   canonical: `${HOST}/`,
   noindex: false,
@@ -13,24 +13,32 @@ const DEFAULT = {
 
 /**
  * Returns static SEO metadata for Next.js `generateMetadata()`
- * Safe for prerendering — no dynamic functions, all plain JSON-serializable values.
+ * Works reliably for WhatsApp, LinkedIn, Twitter, etc.
  */
 export function getSeoMetaData(pathname = "/") {
   try {
-    // Normalize path: remove trailing slash except root
+    // Normalize path
     const cleanPath = pathname !== "/" ? pathname.replace(/\/$/, "") : "/";
     const pageData = seoData[cleanPath] || {};
 
-    // Construct canonical URL safely
-    const canonicalUrl = (pageData.canonical || `${HOST}${cleanPath}`)
-      .replace("https://yourdomain.com", HOST);
+    // Construct canonical URL
+    const canonicalUrl = (pageData.canonical || `${HOST}${cleanPath}`).replace(
+      "https://yourdomain.com",
+      HOST
+    );
 
-    // Robots handling
+    // ✅ Always make OG image absolute
+    const ogImage =
+      pageData.ogImage?.startsWith("http")
+        ? pageData.ogImage
+        : `${HOST}${pageData.ogImage || DEFAULT.ogImage}`;
+
+    // Robots control
     const robots = pageData.noindex
       ? { index: false, follow: false }
       : { index: true, follow: true };
 
-    // Return strictly serializable SEO metadata
+    // Return structured SEO metadata
     return {
       metadataBase: new URL(HOST),
       title: pageData.title || DEFAULT.title,
@@ -38,22 +46,19 @@ export function getSeoMetaData(pathname = "/") {
       openGraph: {
         title: pageData.title || DEFAULT.title,
         description: pageData.description || DEFAULT.description,
-        images: [
-          { url: pageData.ogImage || DEFAULT.ogImage },
-        ],
+        images: [{ url: ogImage }],
         url: canonicalUrl,
         type: "website",
       },
       twitter: {
         card: "summary_large_image",
-        images: [pageData.ogImage || DEFAULT.ogImage],
+        images: [ogImage],
       },
       robots,
       alternates: { canonical: canonicalUrl },
     };
   } catch (error) {
     console.error("Error generating SEO metadata:", error);
-    // Fall back to default to ensure build never breaks
     return DEFAULT;
   }
 }
