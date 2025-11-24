@@ -1,5 +1,11 @@
 src/
 ├── app                        
+│   ├── 3d_configurator                         
+│   │   ├── chair-configurator                          
+│   │   │   └── page.js                    
+│   │   ├── ConfiguratorComponent.js                    
+│   │   ├── models                                      
+│   │   └── page.js                                     
 │   ├── archive                                 
 │   │   ├── ArchiveComponent.js                    
 │   │   ├── page.js                                
@@ -15,6 +21,10 @@ src/
 │   │   ├── about                                    
 │   │   │   ├── About.jsx                           
 │   │   │   └── About.module.css                    
+│   │   ├── configurators                            
+│   │   │   ├── ConfiguratorCard.jsx                        
+│   │   │   ├── Configurators.jsx                           
+│   │   │   └── Configurators.module.css                    
 │   │   ├── credits                                  
 │   │   │   ├── Credits.jsx                           
 │   │   │   └── Credits.module.css                    
@@ -62,10 +72,11 @@ src/
 │   │   ├── archive                     
 │   │   │   └── projectArchive.js                    
 │   │   ├── homepage                    
-│   │   │   ├── about.js                         
-│   │   │   ├── experience.js                    
-│   │   │   ├── projects.js                      
-│   │   │   └── userInfo.js                      
+│   │   │   ├── about.js                           
+│   │   │   ├── configurator.js                    
+│   │   │   ├── experience.js                      
+│   │   │   ├── projects.js                        
+│   │   │   └── userInfo.js                        
 │   │   └── seo                         
 │   │       ├── seo.js                      
 │   │       └── seo.json                    

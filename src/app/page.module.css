@@ -105,6 +105,20 @@
   margin: 0.5rem;
 }
 
+.mainContentConfiguratorSection {
+  margin-top: 8rem;
+}
+.mainContentConfiguratorSection .mainSectionHeading {
+  margin: 0.5rem;
+}
+
+.mainContentCreditSection {
+  margin-top: 8rem;
+}
+.mainContentCreditSection .mainSectionHeading {
+  margin: 0.5rem;
+}
+
 /* Tablet */
 @media (min-width: 640px) {
   /* styles for ≥640px */
@@ -165,11 +179,15 @@
   .mainContent {
     padding: unset;
     margin-top: 6rem;
-    margin-bottom: 12rem;
+    margin-bottom: 7.5rem;
     flex: 4;
   }
 
   .mainContentSection {
+  }
+
+  .mainContentCreditSection{
+    margin-top: 4.5rem;
   }
 }
 
