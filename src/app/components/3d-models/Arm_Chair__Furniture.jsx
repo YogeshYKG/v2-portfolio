@@ -1,12 +1,11 @@
 import React from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
 
-const Arm_Chair__Furniture = (props) => {
+const Arm_Chair__Furniture = ({ rotation, selectedTexture = 0 }) => {
   const { nodes, materials } = useGLTF(
     "/models/arm_chair__furniture/scene.gltf"
   );
 
-  const selectedTexture = 4 ;
   let BASE_TEXTURE_PATH;
   let returnvalidpath;
   let textureProp;
@@ -27,9 +26,10 @@ const Arm_Chair__Furniture = (props) => {
     });
   }
 
+
   return (
     <group
-      {...props}
+      rotation={rotation}
       dispose={null}
       scale={1.6}
       // rotation={[-0.2, Math.PI + Math.PI / 12, 0.1]}

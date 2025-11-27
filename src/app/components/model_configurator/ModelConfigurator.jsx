@@ -18,6 +18,7 @@ const ModelConfigurator = () => {
     return () => window.removeEventListener("resize", checkWidth);
   }, []);
 
+  const { modelList, textureList } = useModelCustomization();
   const { selectedModel, setSelectedModel } = useModelCustomization();
   const { selectedTexture, setSelectedTexture } = useModelCustomization();
 
@@ -29,16 +30,18 @@ const ModelConfigurator = () => {
             <div className={styles.model_configurator__model_title}>Model</div>
 
             <div className={styles.dropdown_container}>
-              <div className={styles.dropdown_selected}>{selectedModel}</div>
+              <div className={styles.dropdown_selected}>
+                {selectedModel?.modelLabel}
+              </div>
 
               <ul className={styles.dropdown_list}>
-                {["Model 1", "Model 2", "Model 3"].map((model, idx) => (
+                {modelList.map((model, idx) => (
                   <li
                     key={idx}
                     className={styles.dropdown_item}
                     onClick={() => setSelectedModel(model)}
                   >
-                    {model}
+                    {model?.modelLabel}
                   </li>
                 ))}
               </ul>
@@ -51,16 +54,18 @@ const ModelConfigurator = () => {
             </div>
 
             <div className={styles.dropdown_container}>
-              <div className={styles.dropdown_selected}>{selectedTexture}</div>
+              <div className={styles.dropdown_selected}>
+                {selectedTexture?.textureLabel}
+              </div>
 
               <ul className={styles.dropdown_list}>
-                {["Texture 1", "Texture 2", "Texture 3"].map((model, idx) => (
+                {textureList.map((texture, idx) => (
                   <li
                     key={idx}
                     className={styles.dropdown_item}
-                    onClick={() => setSelectedTexture(model)}
+                    onClick={() => setSelectedTexture(texture)}
                   >
-                    {model}
+                    {texture?.textureLabel}
                   </li>
                 ))}
               </ul>
@@ -76,11 +81,11 @@ const ModelConfigurator = () => {
                 Selected Model :
               </span>
               <span className={styles.model_configurator__desktop_title_value}>
-                {selectedModel}
+                {selectedModel?.modelLabel}
               </span>
             </div>
             <div className={styles.model_configurator__desktop_values}>
-              {["Model 1", "Model 2", "Model 3"].map((model, idx) => (
+              {modelList.map((model, idx) => (
                 <div
                   className={`${styles.desktop_item} ${
                     selectedModel === model ? styles.desktop_item_active : ""
@@ -88,7 +93,9 @@ const ModelConfigurator = () => {
                   key={idx}
                   onClick={() => setSelectedModel(model)}
                 >
-                  <div className={styles.desktop_item_label}>{model}</div>
+                  <div className={styles.desktop_item_label}>
+                    {model?.modelLabel}
+                  </div>
                 </div>
               ))}
             </div>
@@ -100,11 +107,11 @@ const ModelConfigurator = () => {
                 Selected texture :
               </span>
               <span className={styles.model_configurator__desktop_title_value}>
-                {selectedTexture}
+                {selectedTexture?.textureLabel}
               </span>
             </div>
             <div className={styles.model_configurator__desktop_values}>
-              {["texture 1", "texture 2", "texture 3"].map((texture, idx) => (
+              {textureList.map((texture, idx) => (
                 <div
                   className={`${styles.desktop_item} ${
                     selectedTexture === texture
@@ -114,7 +121,9 @@ const ModelConfigurator = () => {
                   key={idx}
                   onClick={() => setSelectedTexture(texture)}
                 >
-                  <div className={styles.desktop_item_label}>{texture}</div>
+                  <div className={styles.desktop_item_label}>
+                    {texture?.textureLabel}
+                  </div>
                 </div>
               ))}
             </div>

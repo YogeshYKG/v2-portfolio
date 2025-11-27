@@ -1,6 +1,9 @@
-import React, { useEffect, useState } from "react";
-import SceneSetup from "./SceneSetup";
+import React, { useEffect, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
+import { useModelCustomization } from "@/app/components/context/ModelCustomization";
+import ArmChairScene from "@/app/components/configurator-viewer/scene-setup/ArmChairScene";
+import SofaScene from "@/app/components/configurator-viewer/scene-setup/SofaScene";
+import WinterJacketScene from "@/app/components/configurator-viewer/scene-setup/WinterJacketScene";
 
 const ConfiguratorViewer = () => {
   const [bgColor, setBgColor] = useState("rgba(15, 23, 42, 1)");
@@ -28,25 +31,59 @@ const ConfiguratorViewer = () => {
     return () => window.removeEventListener("resize", checkScreen);
   }, []);
 
-  // ChairConfigurator3d.jsx
-  const scenePosition = isDesktop ? [0, 0, 0] : [0, 0, 0]; // not working, use container instead
-  const rotationPosition = isDesktop
-    ? [-0.6, 3.7, 0]
-    : [-0.2, Math.PI + Math.PI / 12, 0.1];
+  const { selectedModel, selectedTexture } = useModelCustomization();
+  const rotationRef = useRef([0, 0, 0]);
+  useEffect(() => {
+    const newRotation = isDesktop
+      ? selectedModel?.desktopRotation
+      : selectedModel?.mobileRotation;
+
+    if (newRotation) {
+      rotationRef.current = newRotation;
+    }
+  }, [selectedModel, isDesktop]);
 
   return (
-    <Canvas
-      shadows
-      dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
-    >
-      <color attach="background" args={[bgColor]} />
-      <SceneSetup
-        bgColor={bgColor}
-        scenePosition={scenePosition}
-        rotationPosition={rotationPosition}
-      />
-    </Canvas>
+    <>
+      {selectedModel?.modelId == 0 && (
+        <Canvas
+          shadows
+          dpr={[1, 2]}
+          gl={{ preserveDrawingBuffer: true }}
+          key={selectedModel?.modelId}
+        >
+          <color attach="background" args={[bgColor]} />
+          <ArmChairScene
+            bgColor={bgColor}
+            isDesktop={isDesktop}
+            rotation={rotationRef.current}
+            selectedTexture={selectedTexture?.textureId}
+          />
+        </Canvas>
+      )}
+      {selectedModel?.modelId == 1 && (
+        <Canvas
+          shadows
+          dpr={[1, 2]}
+          gl={{ preserveDrawingBuffer: true }}
+          key={selectedModel?.modelId}
+        >
+          <color attach="background" args={[bgColor]} />
+          <SofaScene bgColor={bgColor} isDesktop={isDesktop} />
+        </Canvas>
+      )}
+      {selectedModel?.modelId == 2 && (
+        <Canvas
+          shadows
+          dpr={[1, 2]}
+          gl={{ preserveDrawingBuffer: true }}
+          key={selectedModel?.modelId}
+        >
+          <color attach="background" args={[bgColor]} />
+          <WinterJacketScene bgColor={bgColor} isDesktop={isDesktop} />
+        </Canvas>
+      )}
+    </>
   );
 };
 
