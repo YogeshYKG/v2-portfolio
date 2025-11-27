@@ -23,7 +23,7 @@
     "noindex": false
   },
 
-  "/3d_configurator": {
+  "/3d-configurator": {
     "title": "3d Configurators | Yogesh Gupta — Fullstack Developer (MERN, MEAN, React, Node.js)",
     "description": "Browse Yogesh Gupta’s project archive featuring fullstack and frontend web apps built using React, Next.js, Node.js, Express, and MongoDB. Includes UI experiments, SaaS dashboards, SEO tools, and 3D web experiences using Three.js and WebGL.",
     "ogImage": "/og/archive.png",

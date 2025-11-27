@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Experience from "./Experience";
+import SceneSetup from "./SceneSetup";
 import { Canvas } from "@react-three/fiber";
 
-const ChairConfigurator3d = () => {
+const ConfiguratorViewer = () => {
   const [bgColor, setBgColor] = useState("rgba(15, 23, 42, 1)");
   const [isDesktop, setIsDesktop] = useState(false);
 
@@ -41,7 +41,7 @@ const ChairConfigurator3d = () => {
       gl={{ preserveDrawingBuffer: true }}
     >
       <color attach="background" args={[bgColor]} />
-      <Experience
+      <SceneSetup
         bgColor={bgColor}
         scenePosition={scenePosition}
         rotationPosition={rotationPosition}
@@ -50,4 +50,4 @@ const ChairConfigurator3d = () => {
   );
 };
 
-export default ChairConfigurator3d;
+export default ConfiguratorViewer;

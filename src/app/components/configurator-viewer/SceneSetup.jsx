@@ -1,17 +1,15 @@
 "use client";
 
 import {
-  MeshReflectorMaterial,
   PresentationControls,
   Stage,
   Environment,
   Float,
-  ContactShadows,
 } from "@react-three/drei";
 
 import Arm_Chair__Furniture from "@/app/components/3d-models/Arm_Chair__Furniture";
 
-const Experience = ({
+const SceneSetup = ({
   scenePosition = [2, 0.2, 0],
   bgColor,
   rotationPosition,
@@ -51,4 +49,4 @@ const Experience = ({
   );
 };
 
-export default Experience;
+export default SceneSetup;

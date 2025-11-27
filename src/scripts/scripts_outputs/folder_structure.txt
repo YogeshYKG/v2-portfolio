@@ -1,13 +1,11 @@
 src/
 ├── app                        
-│   ├── 3d_configurator                         
-│   │   ├── chair-configurator                          
-│   │   │   ├── ChairConfigurator.js                    
-│   │   │   ├── page.js                                 
-│   │   │   └── page.module.css                         
-│   │   ├── ConfiguratorComponent.js                    
-│   │   ├── models                                      
-│   │   └── page.js                                     
+│   ├── 3d-configurator                         
+│   │   ├── page.js                    
+│   │   └── [model]                    
+│   │       ├── ConfiguratorPage.js                    
+│   │       ├── page.js                                
+│   │       └── page.module.css                        
 │   ├── archive                                 
 │   │   ├── ArchiveComponent.js                    
 │   │   ├── page.js                                
@@ -20,19 +18,19 @@ src/
 │   │       ├── page.js                            
 │   │       └── page.module.css                    
 │   ├── components                              
+│   │   ├── 3d-models                                
+│   │   │   └── Arm_Chair__Furniture.jsx                    
 │   │   ├── about                                    
 │   │   │   ├── About.jsx                           
 │   │   │   └── About.module.css                    
-│   │   ├── chair_configurator                       
-│   │   │   ├── ChairConfigurator.jsx                           
-│   │   │   ├── ChairConfigurator.module.css                    
-│   │   │   └── Experience.jsx                                  
-│   │   ├── configurators                            
-│   │   │   ├── ConfiguratorCard.jsx                        
-│   │   │   ├── Configurators.jsx                           
-│   │   │   ├── Configurators.module.css                    
-│   │   │   └── models                                      
-│   │   │       └── Arm_Chair__Furniture.jsx                    
+│   │   ├── configurator-previews                    
+│   │   │   ├── ConfiguratorPreviewCard.jsx                           
+│   │   │   ├── ConfiguratorPreviewList.jsx                           
+│   │   │   └── ConfiguratorPreviewList.module.css                    
+│   │   ├── configurator-viewer                      
+│   │   │   ├── ConfiguratorViewer.jsx                           
+│   │   │   ├── ConfiguratorViewer.module.css                    
+│   │   │   └── SceneSetup.jsx                                   
 │   │   ├── context                                  
 │   │   │   └── ModelCustomization.jsx                    
 │   │   ├── credits                                  

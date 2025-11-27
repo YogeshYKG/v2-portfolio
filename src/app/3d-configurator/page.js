@@ -1,11 +1,10 @@
 import { getSeoMetaData } from "@/app/data/seo/seo";
-
-import ConfiguratorComponent from "./ConfiguratorComponent";
+import { redirect } from "next/navigation";
 
 export async function generateMetadata() {
-  return getSeoMetaData("/3d_configurator");
+  return getSeoMetaData("/3d-configurator");
 }
 
 export default function Configurator() {
-  return <ConfiguratorComponent />;
+  redirect("/3d_configurator/chair-configurator");
 }

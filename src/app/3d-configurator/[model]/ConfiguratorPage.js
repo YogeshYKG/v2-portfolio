@@ -4,11 +4,11 @@ import React, { useEffect, useState } from "react";
 import Icon from "@/app/components/svg/Icon";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
-import ChairConfigurator3d from "@/app/components/chair_configurator/ChairConfigurator";
+import ConfiguratorViewer from "@/app/components/configurator-viewer/ConfiguratorViewer";
 import ModelConfigurator from "@/app/components/model_configurator/ModelConfigurator";
 import { ModelCustomizationProvider } from "@/app/components/context/ModelCustomization";
 
-const ChairConfigurator = () => {
+const ConfiguratorPage = () => {
   const [settingOpen, setSettingOpen] = useState(false);
   const router = useRouter();
 
@@ -28,7 +28,7 @@ const ChairConfigurator = () => {
   return (
     <ModelCustomizationProvider>
       <div className={styles.configuratorWrapper}>
-        <ChairConfigurator3d />
+        <ConfiguratorViewer />
       </div>
       <div className={styles.pageLayout}>
         <div className={styles.container}>
@@ -36,7 +36,7 @@ const ChairConfigurator = () => {
             <section className={styles.headerSection}>
               <div
                 className={styles.breadCrum}
-                onClick={() => router.push("/3d_configurator")}
+                onClick={() => router.push("/")}
               >
                 <Icon
                   name="arrow"
@@ -44,7 +44,7 @@ const ChairConfigurator = () => {
                   color="currentColor"
                   rotate={180 + 45}
                 />
-                3d Configurator
+                Yogesh kr. Gupta
               </div>
               <div className={styles.title}>
                 <span className="">Chair Configurator</span>
@@ -72,4 +72,4 @@ const ChairConfigurator = () => {
   );
 };
 
-export default ChairConfigurator;
+export default ConfiguratorPage;
