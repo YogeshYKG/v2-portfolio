@@ -2,7 +2,9 @@ src/
 ├── app                        
 │   ├── 3d_configurator                         
 │   │   ├── chair-configurator                          
-│   │   │   └── page.js                    
+│   │   │   ├── ChairConfigurator.js                    
+│   │   │   ├── page.js                                 
+│   │   │   └── page.module.css                         
 │   │   ├── ConfiguratorComponent.js                    
 │   │   ├── models                                      
 │   │   └── page.js                                     
@@ -21,10 +23,18 @@ src/
 │   │   ├── about                                    
 │   │   │   ├── About.jsx                           
 │   │   │   └── About.module.css                    
+│   │   ├── chair_configurator                       
+│   │   │   ├── ChairConfigurator.jsx                           
+│   │   │   ├── ChairConfigurator.module.css                    
+│   │   │   └── Experience.jsx                                  
 │   │   ├── configurators                            
 │   │   │   ├── ConfiguratorCard.jsx                        
 │   │   │   ├── Configurators.jsx                           
-│   │   │   └── Configurators.module.css                    
+│   │   │   ├── Configurators.module.css                    
+│   │   │   └── models                                      
+│   │   │       └── Arm_Chair__Furniture.jsx                    
+│   │   ├── context                                  
+│   │   │   └── ModelCustomization.jsx                    
 │   │   ├── credits                                  
 │   │   │   ├── Credits.jsx                           
 │   │   │   └── Credits.module.css                    
@@ -36,6 +46,9 @@ src/
 │   │   │   ├── Experience.module.css                    
 │   │   │   └── ExperienceCard.jsx                       
 │   │   ├── footer                                   
+│   │   ├── model_configurator                       
+│   │   │   ├── ModelConfigurator.jsx                           
+│   │   │   └── ModelConfigurator.module.css                    
 │   │   ├── navbar                                   
 │   │   │   ├── Navbar.jsx                           
 │   │   │   └── Navbar.module.css                    
@@ -65,6 +78,7 @@ src/
 │   │       │   ├── LinkedinIcon.jsx                            
 │   │       │   ├── MailIcon.jsx                                
 │   │       │   ├── PlaystoreIcon.jsx                           
+│   │       │   ├── SettingIcon.jsx                             
 │   │       │   ├── TimerIcon.jsx                               
 │   │       │   └── UserAddIcon.jsx                             
 │   │       └── index.js                    

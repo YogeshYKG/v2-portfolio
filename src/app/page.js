@@ -5,7 +5,7 @@ import Navbar from "@/app/components/navbar/Navbar";
 import About from "@/app/components/about/About";
 import Experience from "@/app/components/experience/Experience";
 import Projects from "@/app/components/projects/Projects";
-import Configurators from "@/app/components/configurators/Configurators";
+import ConfiguratorPreviewList from "@/app/components/configurator-previews/ConfiguratorPreviewList";
 import Credits from "./components/credits/Credits";
 
 import Icon from "@/app/components/svg/Icon";
@@ -90,7 +90,7 @@ export default function Home() {
 
           <section id="3d_configurators" className={styles.mainContentConfiguratorSection}>
             <div className={styles.mainSectionHeading}>CONFIGURATORS</div>
-            <Configurators />
+            <ConfiguratorPreviewList />
           </section>
 
           <section id="credits" className={styles.mainContentCreditSection}>

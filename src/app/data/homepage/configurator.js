@@ -1,4 +1,5 @@
 const blueberryTravels = {
+  sandboxPath: "/3d_configurator/chair-configurator",
   thumbnail: "/thumbnails/BBT_thumbnail.webp",
   title: "Blueberry Travels Website",
   projectLink: "http://blueberrygroupnew.techbinary.net/",
@@ -20,6 +21,7 @@ const blueberryTravels = {
 };
 
 const vdb = {
+  sandboxPath: "/3d_configurator/chair-configurator",
   thumbnail: "/thumbnails/VDB_thumbnail.webp",
   title: "Virtual Diamond Boutique (VDB) Marketplace",
   projectLink: "https://vdbapp.com/",
@@ -41,6 +43,7 @@ const vdb = {
 };
 
 const hrms = {
+  sandboxPath: "/3d_configurator/chair-configurator",
   thumbnail: "/thumbnails/HRMS_thumbnail.webp",
   title: "Enhanced Internal HRMS",
   projectLink: "https://raj.nic.in/",
