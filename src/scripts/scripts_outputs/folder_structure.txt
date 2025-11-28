@@ -19,7 +19,11 @@ src/
 │   │       └── page.module.css                    
 │   ├── components                              
 │   │   ├── 3d-models                                
-│   │   │   └── Arm_Chair__Furniture.jsx                    
+│   │   │   ├── Arm_Chair__Furniture.jsx                            
+│   │   │   ├── Arm_Chair__Furniture_default.jsx                    
+│   │   │   ├── Living_Room_Sofa__Furniture.jsx                     
+│   │   │   ├── Winter_Jacket.jsx                                   
+│   │   │   └── Winter_Jacket_default.jsx                           
 │   │   ├── about                                    
 │   │   │   ├── About.jsx                           
 │   │   │   └── About.module.css                    
@@ -30,7 +34,10 @@ src/
 │   │   ├── configurator-viewer                      
 │   │   │   ├── ConfiguratorViewer.jsx                           
 │   │   │   ├── ConfiguratorViewer.module.css                    
-│   │   │   └── SceneSetup.jsx                                   
+│   │   │   └── scene-setup                                      
+│   │   │       ├── ArmChairScene.jsx                        
+│   │   │       ├── SofaScene.jsx                            
+│   │   │       └── WinterJacketScene.jsx                    
 │   │   ├── context                                  
 │   │   │   └── ModelCustomization.jsx                    
 │   │   ├── credits                                  

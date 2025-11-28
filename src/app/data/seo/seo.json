@@ -31,6 +31,30 @@
     "noindex": false
   },
 
+  "/3d-configurator/arm-chair": {
+    "title": "Arm Chair 3D Configurator | Yogesh Gupta — Customize Colors, Materials, Textures",
+    "description": "Customize a premium 3D Arm Chair with real-time texture, material, and rotation controls. Built using React Three Fiber and WebGL, this interactive experience showcases photorealistic lighting and handcrafted GLTF models.",
+    "ogImage": "/og/arm-chair.png",
+    "canonical": "https://yourdomain.com/3d-configurator/arm-chair",
+    "noindex": false
+  },
+
+  "/3d-configurator/modern-accent-chair": {
+    "title": "Modern Accent Chair Configurator | Yogesh Gupta — Real-Time 3D Customization",
+    "description": "Experiment with materials, fabrics, and colors on the Modern Accent Chair in this fully interactive 3D configurator. Developed using React Three Fiber, drei, and PBR-based lighting for a high-realism product demo.",
+    "ogImage": "/og/modern-accent-chair.png",
+    "canonical": "https://yourdomain.com/3d-configurator/modern-accent-chair",
+    "noindex": false
+  },
+
+  "/3d-configurator/winter-jacket": {
+    "title": "Winter Jacket 3D Configurator | Yogesh Gupta — 3D Apparel Customization (WebGL)",
+    "description": "Customize a 3D Winter Jacket with different colors, fabrics, and lighting. A high-quality 3D WebGL experience showcasing Yogesh Gupta’s expertise in interactive product visualization using React Three Fiber and GLTF pipelines.",
+    "ogImage": "/og/winter-jacket.png",
+    "canonical": "https://yourdomain.com/3d-configurator/winter-jacket",
+    "noindex": false
+  },
+
   "/about": {
     "title": "About Yogesh Gupta | Frontend and Fullstack Engineer (MERN, MEAN, React)",
     "description": "Yogesh Gupta is a passionate Frontend and Fullstack Engineer specializing in React, Next.js, and Node.js. With 3.5+ years of experience, he crafts scalable, clean, and maintainable web applications that blend performance with purpose.",

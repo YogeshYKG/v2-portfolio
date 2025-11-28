@@ -6,5 +6,5 @@ export async function generateMetadata() {
 }
 
 export default function Configurator() {
-  redirect("/3d_configurator/arm-chair");
+  redirect("/3d-configurator/arm-chair");
 }
