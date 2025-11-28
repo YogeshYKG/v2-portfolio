@@ -1,10 +1,13 @@
 import React from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
+import { useModelCustomization } from "../context/ModelCustomization";
 
 const Arm_Chair__Furniture = ({ rotation, selectedTexture = 0 }) => {
   const { nodes, materials } = useGLTF(
     "/models/arm_chair__furniture/scene.gltf"
   );
+
+  const { selectedColor } = useModelCustomization();
 
   let BASE_TEXTURE_PATH;
   let returnvalidpath;
@@ -18,6 +21,7 @@ const Arm_Chair__Furniture = ({ rotation, selectedTexture = 0 }) => {
         return `${file_without_extension}.png`;
       }
     };
+
     textureProp = useTexture({
       map: returnvalidpath(`${BASE_TEXTURE_PATH}/basecolor`),
       normalMap: returnvalidpath(`${BASE_TEXTURE_PATH}/normal`),
@@ -25,7 +29,6 @@ const Arm_Chair__Furniture = ({ rotation, selectedTexture = 0 }) => {
       aoMap: returnvalidpath(`${BASE_TEXTURE_PATH}/ambientOcclusion`),
     });
   }
-
 
   return (
     <group
@@ -50,7 +53,23 @@ const Arm_Chair__Furniture = ({ rotation, selectedTexture = 0 }) => {
                 position={[0, 40.986, 0]}
                 scale={43.314}
               >
-                <meshStandardMaterial {...textureProp} />
+                {selectedColor?.colorId == 0 ? (
+                  <meshStandardMaterial
+                    map={selectedColor?.colorId == 0 ? textureProp?.map : null}
+                    normalMap={textureProp.normalMap}
+                    roughnessMap={textureProp.roughnessMap}
+                    aoMap={textureProp.aoMap}
+                  />
+                ) : (
+                  <meshStandardMaterial
+                    color={
+                      selectedColor?.colorId == 0 ? null : selectedColor?.hex
+                    }
+                    normalMap={textureProp.normalMap}
+                    roughnessMap={textureProp.roughnessMap}
+                    aoMap={textureProp.aoMap}
+                  />
+                )}
               </mesh>
             </>
           )}
