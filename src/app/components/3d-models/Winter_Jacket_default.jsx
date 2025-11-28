@@ -5,7 +5,7 @@ const Winter_Jacket_default = (props) => {
   const { nodes, materials } = useGLTF("/models/winter_jacket/scene.gltf");
   return (
     <group {...props} dispose={null}>
-      <group rotation={[-Math.PI / 2, 0, 4]} scale={0.011}>
+      <group rotation={[-Math.PI / 2, 0.2, 0.8]} scale={0.011}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <mesh
             geometry={nodes.defaultMaterial.geometry}

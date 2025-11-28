@@ -1,5 +1,5 @@
 const blueberryTravels = {
-  sandboxPath: "/3d-configurator/chair-configurator",
+  sandboxPath: "/3d-configurator/arm-chair",
   thumbnail: "/thumbnails/BBT_thumbnail.webp",
   title: "Blueberry Travels Website",
   projectLink: "http://blueberrygroupnew.techbinary.net/",

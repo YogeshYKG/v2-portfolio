@@ -8,6 +8,7 @@ import {
 } from "@react-three/drei";
 
 import Winter_Jacket from "@/app/components/3d-models/Winter_Jacket";
+import Winter_Jacket_default from "@/app/components/3d-models/Winter_Jacket_default";
 
 const WinterJacketScene = ({ rotation, isDesktop, selectedTexture }) => {
   return (
@@ -30,7 +31,16 @@ const WinterJacketScene = ({ rotation, isDesktop, selectedTexture }) => {
             floatIntensity={1}
             floatingRange={[0, 0.1]}
           >
-            <Winter_Jacket key="jacket" />
+            {selectedTexture != 0 && (
+              <Winter_Jacket
+                key="jacket"
+                rotation={rotation}
+                selectedTexture={selectedTexture}
+              />
+            )}
+            {selectedTexture == 0 && (
+              <Winter_Jacket_default key="jacket" rotation={rotation} />
+            )}
           </Float>
         </Stage>
       </PresentationControls>
