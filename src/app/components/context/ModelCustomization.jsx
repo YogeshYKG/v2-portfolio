@@ -2,6 +2,30 @@ const { createContext, useContext, useState, useEffect } = require("react");
 
 const ModelCustomizationContext = createContext({});
 
+// 🔥 Master configuration for each model
+export const MODEL_CONFIG = {
+  0: {
+    textureLabel: "Texture",
+    colorLabel: "Color",
+    hideTextures: [],
+    hideColors: [5, 1],
+  },
+
+  1: {
+    textureLabel: "No Texture",
+    colorLabel: "Fabric",
+    hideTextures: [1], // example
+    hideColors: [1, 2, 3], // example
+  },
+
+  2: {
+    textureLabel: "Chain",
+    colorLabel: "Chain Color",
+    hideTextures: [2],
+    hideColors: [4],
+  },
+};
+
 export const ModelCustomizationProvider = (props) => {
   const [modelList] = useState([
     {
@@ -10,7 +34,10 @@ export const ModelCustomizationProvider = (props) => {
       slug: "arm-chair",
       mobileRotation: [-0.6, 3.7, 0],
       desktopRotation: [-0.2, Math.PI + Math.PI / 12, 0.1],
-      modelSlug: "",
+      textureLabel: "Selected Texture :",
+      colorLabel: "Selected Color :",
+      textureLabelMobile: "Selected Texture :",
+      colorLabelMobile: "Selected Color :",
       haveTexture: true,
       haveChain: false,
       haveColor: true,
@@ -21,7 +48,10 @@ export const ModelCustomizationProvider = (props) => {
       slug: "mordern-accent-chair",
       mobileRotation: [-0.6, 3.7, 0],
       desktopRotation: [-0.2, Math.PI + Math.PI / 12, 0.1],
-      modelSlug: "",
+      textureLabel: "Selected Texture :",
+      colorLabel: "Selected Color :",
+      textureLabelMobile: "Selected Texture :",
+      colorLabelMobile: "Selected Color :",
       haveTexture: false,
       haveChain: false,
       haveColor: true,
@@ -32,14 +62,17 @@ export const ModelCustomizationProvider = (props) => {
       slug: "winter-jacket",
       mobileRotation: [0.1, Math.PI * 0.75, 0],
       desktopRotation: [0.1, Math.PI * 0.75, 0],
-      modelSlug: "",
+      textureLabel: "Selected Chain :",
+      colorLabel: "Selected Color :",
+      textureLabelMobile: "Texture :",
+      colorLabelMobile: "Color :",
       haveTexture: false,
       haveChain: true,
       haveColor: true,
     },
   ]);
 
-  const [textureList] = useState([
+  const [textureList, setTextureList] = useState([
     {
       textureLabel: "Default",
       textureId: 0,
@@ -54,22 +87,7 @@ export const ModelCustomizationProvider = (props) => {
     },
   ]);
 
-  const [chainList] = useState([
-    {
-      chainLabel: "Default",
-      chainId: 0,
-    },
-    {
-      chainLabel: "Chain 1",
-      chainId: 1,
-    },
-    {
-      chainLabel: "Chain 2",
-      chainId: 2,
-    },
-  ]);
-
-  const [colorList] = useState([
+  const [colorList, setColorList] = useState([
     {
       colorId: 0,
       colorName: "Default",
@@ -139,8 +157,36 @@ export const ModelCustomizationProvider = (props) => {
 
   const [selectedModel, setSelectedModel] = useState(modelList[0]);
   const [selectedTexture, setSelectedTexture] = useState(textureList[0]);
-  const [selectedChain, setSelectedChain] = useState(chainList[0]);
   const [selectedColor, setSelectedColor] = useState(colorList[0]);
+
+  useEffect(() => {
+    const modelId = selectedModel?.modelId ?? 0;
+
+    const { textureLabel, colorLabel, hideTextures, hideColors } =
+      MODEL_CONFIG[modelId] || MODEL_CONFIG[0];
+
+    // 🔹 Update texture list (with label + filter)
+    setTextureList((prev) =>
+      prev
+        .filter((t) => !hideTextures.includes(t.textureId))
+        .map((item) =>
+          item.textureId === 0
+            ? { ...item, textureLabel: "Default" }
+            : { ...item, textureLabel: `${textureLabel} ${item.textureId}` }
+        )
+    );
+
+    // 🔹 Update color list (with label + filter)
+    setColorList((prev) =>
+      prev
+        .filter((c) => !hideColors.includes(c.colorId))
+        .map((item) =>
+          item.colorId === 0
+            ? { ...item, colorName: "Default" }
+            : { ...item, colorName: `${colorLabel} ${item.colorId}` }
+        )
+    );
+  }, [selectedModel]);
 
   useEffect(() => {
     if (selectedTexture == textureList[0]) {
@@ -158,8 +204,6 @@ export const ModelCustomizationProvider = (props) => {
         setSelectedModel,
         selectedTexture,
         setSelectedTexture,
-        selectedChain,
-        setSelectedChain,
         selectedColor,
         setSelectedColor,
       }}

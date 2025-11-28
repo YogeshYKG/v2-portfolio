@@ -92,7 +92,7 @@ const ModelConfigurator = () => {
           {/* TEXTURE DROPDOWN */}
           <div className={styles.model_configurator__section_texture}>
             <div className={styles.model_configurator__texture_title}>
-              Texture
+              {selectedModel?.textureLabelMobile}
             </div>
 
             <div className={styles.dropdown_container}>
@@ -116,7 +116,9 @@ const ModelConfigurator = () => {
 
           {/* COLOR DROPDOWN */}
           <div className={styles.model_configurator__section_color}>
-            <div className={styles.model_configurator__color_title}>Color</div>
+            <div className={styles.model_configurator__color_title}>
+              {selectedModel?.colorLabelMobile}
+            </div>
 
             <div className={styles.dropdown_container}>
               <div className={styles.dropdown_selected}>
@@ -181,7 +183,7 @@ const ModelConfigurator = () => {
           <div className={styles.model_configurator__desktop_section_texture}>
             <div className={styles.model_configurator__desktop_title}>
               <span className={styles.model_configurator__desktop_title_label}>
-                Selected texture :
+                {selectedModel?.textureLabel}
               </span>
               <span className={styles.model_configurator__desktop_title_value}>
                 {selectedTexture?.textureLabel}
@@ -211,7 +213,7 @@ const ModelConfigurator = () => {
           <div className={styles.model_configurator__desktop_section_color}>
             <div className={styles.model_configurator__desktop_title}>
               <span className={styles.model_configurator__desktop_title_label}>
-                Selected Color :
+                {selectedModel?.colorLabel}
               </span>
               <span className={styles.model_configurator__desktop_title_value}>
                 {selectedColor?.colorName}
