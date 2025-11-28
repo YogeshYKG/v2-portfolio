@@ -25,9 +25,10 @@ const ModelConfigurator = () => {
   // ---------------------------
   // CONTEXT
   // ---------------------------
-  const { modelList, textureList } = useModelCustomization();
+  const { modelList, textureList, colorList } = useModelCustomization();
   const { selectedModel, setSelectedModel } = useModelCustomization();
   const { selectedTexture, setSelectedTexture } = useModelCustomization();
+  const { selectedColor, setSelectedColor } = useModelCustomization();
 
   // ---------------------------
   // AUTO-SELECT MODEL FROM URL
@@ -53,6 +54,11 @@ const ModelConfigurator = () => {
   const handleSelectedModel = (model) => {
     setSelectedModel(model);
     router.push(`/3d-configurator/${model?.slug}`);
+  };
+
+  const handleSelectedColor = (color) => {
+    if (selectedTexture?.textureId === 0 && idx != 0) return;
+    setSelectedColor(color);
   };
 
   return (
@@ -104,6 +110,36 @@ const ModelConfigurator = () => {
                     {texture?.textureLabel}
                   </li>
                 ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* COLOR DROPDOWN */}
+          <div className={styles.model_configurator__section_color}>
+            <div className={styles.model_configurator__color_title}>Color</div>
+
+            <div className={styles.dropdown_container}>
+              <div className={styles.dropdown_selected}>
+                {selectedColor?.colorName}
+              </div>
+
+              <ul className={styles.dropdown_list}>
+                {colorList.map((color, idx) => {
+                  const isDisabled = selectedTexture == 0 && idx !== 0;
+                  return (
+                    <li
+                      key={idx}
+                      className={`${styles.dropdown_item} 
+                      ${isDisabled ? styles.dropdown_item_disabled : ""}`}
+                      onClick={() => handleSelectedColor(color)}
+                    >
+                      <span
+                        className={styles.dropdown_item_color}
+                        style={{ backgroundColor: color?.hex }}
+                      ></span>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>
@@ -165,6 +201,44 @@ const ModelConfigurator = () => {
                 >
                   <div className={styles.desktop_item_label}>
                     {texture?.textureLabel}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* COLOR SELECT */}
+          <div className={styles.model_configurator__desktop_section_color}>
+            <div className={styles.model_configurator__desktop_title}>
+              <span className={styles.model_configurator__desktop_title_label}>
+                Selected Color :
+              </span>
+              <span className={styles.model_configurator__desktop_title_value}>
+                {selectedColor?.colorName}
+              </span>
+            </div>
+
+            <div className={styles.model_configurator__desktop_values}>
+              {colorList.map((color, idx) => (
+                <div
+                  key={idx}
+                  className={`${styles.desktop_item} 
+                    ${
+                      selectedColor === color ? styles.desktop_item_active : ""
+                    } 
+                    ${
+                      selectedTexture?.textureId === 0 && idx != 0
+                        ? styles.desktop_item_disabled
+                        : ""
+                    }
+                  `}
+                  onClick={() => handleSelectedColor(color)}
+                >
+                  <div className={styles.desktop_item_label}>
+                    <span
+                      className={styles.desktop_item_circle}
+                      style={{ backgroundColor: color?.hex }}
+                    ></span>
                   </div>
                 </div>
               ))}

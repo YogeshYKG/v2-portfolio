@@ -1,4 +1,4 @@
-const { createContext, useContext, useState } = require("react");
+const { createContext, useContext, useState, useEffect } = require("react");
 
 const ModelCustomizationContext = createContext({});
 
@@ -71,28 +71,69 @@ export const ModelCustomizationProvider = (props) => {
 
   const [colorList] = useState([
     {
-      color: "currentcolor",
       colorId: 0,
+      colorName: "Default",
+      hex: "currentcolor",
     },
+    // --- Warm Neutrals (Arm Chair, Sofa) ---
     {
-      color: "#fff",
       colorId: 1,
+      colorName: "Warm Beige",
+      hex: "#D8C7A6",
     },
     {
-      color: "#fff",
       colorId: 2,
+      colorName: "Sandstone",
+      hex: "#CBBBA0",
     },
     {
-      color: "#fff",
       colorId: 3,
+      colorName: "Cocoa Brown",
+      hex: "#6B4F37",
     },
     {
-      color: "#fff",
       colorId: 4,
+      colorName: "Charcoal",
+      hex: "#3A3A3A",
+    },
+
+    // --- Modern Designer Shades ---
+    {
+      colorId: 5,
+      colorName: "Slate Blue",
+      hex: "#4A5C7B",
     },
     {
-      color: "#fff",
-      colorId: 5,
+      colorId: 6,
+      colorName: "Forest Green",
+      hex: "#2F4F3E",
+    },
+    {
+      colorId: 7,
+      colorName: "Muted Olive",
+      hex: "#7A8365",
+    },
+
+    // --- Premium Textile Colors (Also for Jackets) ---
+    {
+      colorId: 8,
+      colorName: "Deep Burgundy",
+      hex: "#5A1A1A",
+    },
+    {
+      colorId: 9,
+      colorName: "Midnight Navy",
+      hex: "#1A2735",
+    },
+    {
+      colorId: 10,
+      colorName: "Arctic White",
+      hex: "#F4F4F4",
+    },
+    {
+      colorId: 11,
+      colorName: "Storm Grey",
+      hex: "#8D8D8D",
     },
   ]);
 
@@ -100,6 +141,12 @@ export const ModelCustomizationProvider = (props) => {
   const [selectedTexture, setSelectedTexture] = useState(textureList[0]);
   const [selectedChain, setSelectedChain] = useState(chainList[0]);
   const [selectedColor, setSelectedColor] = useState(colorList[0]);
+
+  useEffect(() => {
+    if (selectedTexture == textureList[0]) {
+      setSelectedColor(colorList[0]);
+    }
+  }, [selectedTexture]);
 
   return (
     <ModelCustomizationContext.Provider
