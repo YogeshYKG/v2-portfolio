@@ -7,8 +7,13 @@ import {
   Float,
 } from "@react-three/drei";
 import Living_Room_Sofa__Furniture from "@/app/components/3d-models/Living_Room_Sofa__Furniture";
+import Living_Room_Sofa__Furniture_default from "@/app/components/3d-models/Living_Room_Sofa__Furniture_default";
 
-const SofaScene = ({ rotation, isDesktop, selectedTexture }) => {
+const SofaScene = ({
+  rotation,
+  isDesktop,
+  selectedTexture,
+}) => {
   return (
     <>
       <PresentationControls
@@ -29,7 +34,20 @@ const SofaScene = ({ rotation, isDesktop, selectedTexture }) => {
             floatIntensity={1}
             floatingRange={[0, 0.1]}
           >
-            <Living_Room_Sofa__Furniture key="sofa" />
+            {selectedTexture != 0 && (
+              <Living_Room_Sofa__Furniture
+                key={`sofa-${selectedTexture}`}
+                rotation={rotation}
+                selectedTexture={selectedTexture}
+              />
+            )}
+            {selectedTexture == 0 && (
+              <Living_Room_Sofa__Furniture_default
+                key={`sofa-${selectedTexture}`}
+                rotation={rotation}
+                selectedTexture={selectedTexture}
+              />
+            )}
           </Float>
         </Stage>
       </PresentationControls>

@@ -90,7 +90,12 @@ const ConfiguratorViewer = () => {
           key={urlModel.modelId}
         >
           <color attach="background" args={[bgColor]} />
-          <SofaScene bgColor={bgColor} isDesktop={isDesktop} />
+          <SofaScene
+            bgColor={bgColor}
+            isDesktop={isDesktop}
+            rotation={rotationRef.current}
+            selectedTexture={selectedTexture?.textureId}
+          />
         </Canvas>
       )}
 

@@ -29,6 +29,10 @@ const ModelConfigurator = () => {
   const { selectedModel, setSelectedModel } = useModelCustomization();
   const { selectedTexture, setSelectedTexture } = useModelCustomization();
   const { selectedColor, setSelectedColor } = useModelCustomization();
+  const { selectedColor_varient1, setSelectedColor_varient1 } =
+    useModelCustomization();
+  const { selectedColor_varient2, setSelectedColor_varient2 } =
+    useModelCustomization();
 
   // ---------------------------
   // AUTO-SELECT MODEL FROM URL
@@ -56,9 +60,20 @@ const ModelConfigurator = () => {
     router.push(`/3d-configurator/${model?.slug}`);
   };
 
-  const handleSelectedColor = (color) => {
+  const handleSelectedColor = (color, varient) => {
     if (selectedTexture?.textureId === 0 && idx != 0) return;
-    setSelectedColor(color);
+    switch (varient) {
+      case 1:
+        setSelectedColor_varient1(color);
+        break;
+
+      case 2:
+        setSelectedColor_varient2(color);
+        break;
+
+      default:
+        setSelectedColor(color);
+    }
   };
 
   return (
@@ -145,6 +160,74 @@ const ModelConfigurator = () => {
               </ul>
             </div>
           </div>
+
+          {/* COLOR DROPDOWN VARIENT 1 */}
+          {selectedModel?.modelId === 1 && (
+            <div className={styles.model_configurator__section_color}>
+              <div className={styles.model_configurator__color_title}>
+                {selectedModel?.colorLabelMobile_varient1}
+              </div>
+
+              <div className={styles.dropdown_container}>
+                <div className={styles.dropdown_selected}>
+                  {selectedColor_varient1?.colorName}
+                </div>
+
+                <ul className={styles.dropdown_list}>
+                  {colorList.map((color, idx) => {
+                    const isDisabled = selectedTexture == 0 && idx !== 0;
+                    return (
+                      <li
+                        key={idx}
+                        className={`${styles.dropdown_item} 
+                      ${isDisabled ? styles.dropdown_item_disabled : ""}`}
+                        onClick={() => handleSelectedColor(color, 1)}
+                      >
+                        <span
+                          className={styles.dropdown_item_color}
+                          style={{ backgroundColor: color?.hex }}
+                        ></span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </div>
+          )}
+
+          {/* COLOR DROPDOWN VARIENT 2*/}
+          {selectedModel?.modelId === 1 && (
+            <div className={styles.model_configurator__section_color}>
+              <div className={styles.model_configurator__color_title}>
+                {selectedModel?.colorLabelMobile_varient2}
+              </div>
+
+              <div className={styles.dropdown_container}>
+                <div className={styles.dropdown_selected}>
+                  {selectedColor_varient2?.colorName}
+                </div>
+
+                <ul className={styles.dropdown_list}>
+                  {colorList.map((color, idx) => {
+                    const isDisabled = selectedTexture == 0 && idx !== 0;
+                    return (
+                      <li
+                        key={idx}
+                        className={`${styles.dropdown_item} 
+                      ${isDisabled ? styles.dropdown_item_disabled : ""}`}
+                        onClick={() => handleSelectedColor(color, 2)}
+                      >
+                        <span
+                          className={styles.dropdown_item_color}
+                          style={{ backgroundColor: color?.hex }}
+                        ></span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </div>
+          )}
         </div>
       )}
 
@@ -246,6 +329,98 @@ const ModelConfigurator = () => {
               ))}
             </div>
           </div>
+
+          {/* COLOR SELECT Varient 1*/}
+          {selectedModel?.modelId === 1 && (
+            <div className={styles.model_configurator__desktop_section_color}>
+              <div className={styles.model_configurator__desktop_title}>
+                <span
+                  className={styles.model_configurator__desktop_title_label}
+                >
+                  {selectedModel?.colorLabel_varient1}
+                </span>
+                <span
+                  className={styles.model_configurator__desktop_title_value}
+                >
+                  {selectedColor_varient1?.colorName}
+                </span>
+              </div>
+
+              <div className={styles.model_configurator__desktop_values}>
+                {colorList.map((color, idx) => (
+                  <div
+                    key={idx}
+                    className={`${styles.desktop_item} 
+                    ${
+                      selectedColor_varient1 === color
+                        ? styles.desktop_item_active
+                        : ""
+                    } 
+                    ${
+                      selectedTexture?.textureId === 0 && idx != 0
+                        ? styles.desktop_item_disabled
+                        : ""
+                    }
+                  `}
+                    onClick={() => handleSelectedColor(color, 1)}
+                  >
+                    <div className={styles.desktop_item_label}>
+                      <span
+                        className={styles.desktop_item_circle}
+                        style={{ backgroundColor: color?.hex }}
+                      ></span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* COLOR SELECT Varient 2*/}
+          {selectedModel?.modelId === 1 && (
+            <div className={styles.model_configurator__desktop_section_color}>
+              <div className={styles.model_configurator__desktop_title}>
+                <span
+                  className={styles.model_configurator__desktop_title_label}
+                >
+                  {selectedModel?.colorLabel_varient2}
+                </span>
+                <span
+                  className={styles.model_configurator__desktop_title_value}
+                >
+                  {selectedColor_varient2?.colorName}
+                </span>
+              </div>
+
+              <div className={styles.model_configurator__desktop_values}>
+                {colorList.map((color, idx) => (
+                  <div
+                    key={idx}
+                    className={`${styles.desktop_item} 
+                    ${
+                      selectedColor_varient2 === color
+                        ? styles.desktop_item_active
+                        : ""
+                    } 
+                    ${
+                      selectedTexture?.textureId === 0 && idx != 0
+                        ? styles.desktop_item_disabled
+                        : ""
+                    }
+                  `}
+                    onClick={() => handleSelectedColor(color, 2)}
+                  >
+                    <div className={styles.desktop_item_label}>
+                      <span
+                        className={styles.desktop_item_circle}
+                        style={{ backgroundColor: color?.hex }}
+                      ></span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       )}
     </>

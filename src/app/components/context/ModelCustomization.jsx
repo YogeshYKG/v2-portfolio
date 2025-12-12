@@ -13,9 +13,9 @@ export const MODEL_CONFIG = {
 
   1: {
     textureLabel: "No Texture",
-    colorLabel: "Fabric",
-    hideTextures: [1], // example
-    hideColors: [1, 2, 3], // example
+    colorLabel: "Color",
+    hideTextures: [0], // example
+    hideColors: [], // example
   },
 
   2: {
@@ -36,8 +36,8 @@ export const ModelCustomizationProvider = (props) => {
       desktopRotation: [-0.2, Math.PI + Math.PI / 12, 0.1],
       textureLabel: "Selected Texture :",
       colorLabel: "Selected Color :",
-      textureLabelMobile: "Selected Texture :",
-      colorLabelMobile: "Selected Color :",
+      textureLabelMobile: "Texture :",
+      colorLabelMobile: "Color :",
       haveTexture: true,
       haveChain: false,
       haveColor: true,
@@ -49,9 +49,13 @@ export const ModelCustomizationProvider = (props) => {
       mobileRotation: [-0.6, 3.7, 0],
       desktopRotation: [-0.2, Math.PI + Math.PI / 12, 0.1],
       textureLabel: "Selected Texture :",
-      colorLabel: "Selected Color :",
-      textureLabelMobile: "Selected Texture :",
-      colorLabelMobile: "Selected Color :",
+      colorLabel: "Leg Color :",
+      colorLabel_varient1: "Armpit Color :",
+      colorLabel_varient2: "Fabric Color :",
+      textureLabelMobile: "Texture :",
+      colorLabelMobile: "Leg :",
+      colorLabelMobile_varient1: "Armpit :",
+      colorLabelMobile_varient2: "Fabric :",
       haveTexture: false,
       haveChain: false,
       haveColor: true,
@@ -158,6 +162,12 @@ export const ModelCustomizationProvider = (props) => {
   const [selectedModel, setSelectedModel] = useState(modelList[0]);
   const [selectedTexture, setSelectedTexture] = useState(textureList[0]);
   const [selectedColor, setSelectedColor] = useState(colorList[0]);
+  const [selectedColor_varient1, setSelectedColor_varient1] = useState(
+    colorList[0]
+  );
+  const [selectedColor_varient2, setSelectedColor_varient2] = useState(
+    colorList[0]
+  );
 
   useEffect(() => {
     const modelId = selectedModel?.modelId ?? 0;
@@ -191,6 +201,8 @@ export const ModelCustomizationProvider = (props) => {
   useEffect(() => {
     if (selectedTexture == textureList[0]) {
       setSelectedColor(colorList[0]);
+      setSelectedColor_varient1(colorList[0]);
+      setSelectedColor_varient2(colorList[0]);
     }
   }, [selectedTexture]);
 
@@ -206,6 +218,10 @@ export const ModelCustomizationProvider = (props) => {
         setSelectedTexture,
         selectedColor,
         setSelectedColor,
+        selectedColor_varient1,
+        setSelectedColor_varient1,
+        selectedColor_varient2,
+        setSelectedColor_varient2,
       }}
     >
       {props.children}

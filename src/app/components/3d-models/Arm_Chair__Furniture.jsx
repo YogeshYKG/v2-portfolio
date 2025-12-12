@@ -1,6 +1,6 @@
 import React from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
-import { useModelCustomization } from "../context/ModelCustomization";
+import { useModelCustomization } from "@/app/components/context/ModelCustomization";
 
 const Arm_Chair__Furniture = ({ rotation, selectedTexture = 0 }) => {
   const { nodes, materials } = useGLTF(

@@ -37,7 +37,7 @@ const ConfiguratorContent = () => {
 
     const found = modelList.find((m) => m.slug === slug);
     if (found) {
-      setSelectedModel(found.name); // or found.title
+      setSelectedModel(found); // or found.title
     }
   }, [slug, modelList]);
 

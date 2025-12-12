@@ -2,9 +2,12 @@
 
 import React from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
+import { useModelCustomization } from "@/app/components/context/ModelCustomization";
 
 const Winter_Jacket = ({ selectedTexture }) => {
   const { nodes, materials } = useGLTF("/models/winter_jacket/scene.gltf");
+
+  const { selectedColor } = useModelCustomization();
 
   let BASE_TEXTURE_PATH;
   let returnvalidpath;
@@ -52,8 +55,23 @@ const Winter_Jacket = ({ selectedTexture }) => {
           />
 
           <mesh geometry={nodes.defaultMaterial_5.geometry}>
-            <meshStandardMaterial {...textureProp} />
+            {selectedColor?.colorId == 0 ? (
+              <meshStandardMaterial
+                map={selectedColor?.colorId == 0 ? textureProp?.map : null}
+                normalMap={textureProp.normalMap}
+                roughnessMap={textureProp.roughnessMap}
+                aoMap={textureProp.aoMap}
+              />
+            ) : (
+              <meshStandardMaterial
+                color={selectedColor?.colorId == 0 ? null : selectedColor?.hex}
+                normalMap={textureProp.normalMap}
+                roughnessMap={textureProp.roughnessMap}
+                aoMap={textureProp.aoMap}
+              />
+            )}
           </mesh>
+
           <mesh
             geometry={nodes.defaultMaterial_6.geometry}
             material={materials.Coat}
