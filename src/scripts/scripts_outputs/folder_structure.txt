@@ -1,5 +1,11 @@
 src/
 ├── app                        
+│   ├── 3d-configurator                         
+│   │   ├── page.js                    
+│   │   └── [model]                    
+│   │       ├── ConfiguratorPage.js                    
+│   │       ├── page.js                                
+│   │       └── page.module.css                        
 │   ├── archive                                 
 │   │   ├── ArchiveComponent.js                    
 │   │   ├── page.js                                
@@ -12,9 +18,28 @@ src/
 │   │       ├── page.js                            
 │   │       └── page.module.css                    
 │   ├── components                              
+│   │   ├── 3d-models                                
+│   │   │   ├── Arm_Chair__Furniture.jsx                            
+│   │   │   ├── Arm_Chair__Furniture_default.jsx                    
+│   │   │   ├── Living_Room_Sofa__Furniture.jsx                     
+│   │   │   ├── Winter_Jacket.jsx                                   
+│   │   │   └── Winter_Jacket_default.jsx                           
 │   │   ├── about                                    
 │   │   │   ├── About.jsx                           
 │   │   │   └── About.module.css                    
+│   │   ├── configurator-previews                    
+│   │   │   ├── ConfiguratorPreviewCard.jsx                           
+│   │   │   ├── ConfiguratorPreviewList.jsx                           
+│   │   │   └── ConfiguratorPreviewList.module.css                    
+│   │   ├── configurator-viewer                      
+│   │   │   ├── ConfiguratorViewer.jsx                           
+│   │   │   ├── ConfiguratorViewer.module.css                    
+│   │   │   └── scene-setup                                      
+│   │   │       ├── ArmChairScene.jsx                        
+│   │   │       ├── SofaScene.jsx                            
+│   │   │       └── WinterJacketScene.jsx                    
+│   │   ├── context                                  
+│   │   │   └── ModelCustomization.jsx                    
 │   │   ├── credits                                  
 │   │   │   ├── Credits.jsx                           
 │   │   │   └── Credits.module.css                    
@@ -26,6 +51,9 @@ src/
 │   │   │   ├── Experience.module.css                    
 │   │   │   └── ExperienceCard.jsx                       
 │   │   ├── footer                                   
+│   │   ├── model_configurator                       
+│   │   │   ├── ModelConfigurator.jsx                           
+│   │   │   └── ModelConfigurator.module.css                    
 │   │   ├── navbar                                   
 │   │   │   ├── Navbar.jsx                           
 │   │   │   └── Navbar.module.css                    
@@ -55,6 +83,7 @@ src/
 │   │       │   ├── LinkedinIcon.jsx                            
 │   │       │   ├── MailIcon.jsx                                
 │   │       │   ├── PlaystoreIcon.jsx                           
+│   │       │   ├── SettingIcon.jsx                             
 │   │       │   ├── TimerIcon.jsx                               
 │   │       │   └── UserAddIcon.jsx                             
 │   │       └── index.js                    
@@ -62,10 +91,11 @@ src/
 │   │   ├── archive                     
 │   │   │   └── projectArchive.js                    
 │   │   ├── homepage                    
-│   │   │   ├── about.js                         
-│   │   │   ├── experience.js                    
-│   │   │   ├── projects.js                      
-│   │   │   └── userInfo.js                      
+│   │   │   ├── about.js                           
+│   │   │   ├── configurator.js                    
+│   │   │   ├── experience.js                      
+│   │   │   ├── projects.js                        
+│   │   │   └── userInfo.js                        
 │   │   └── seo                         
 │   │       ├── seo.js                      
 │   │       └── seo.json                    

@@ -19,6 +19,7 @@ import {
   CurrencyExchangeIcon,
   TimerIcon,
   BugIcon,
+  SettingIcon,
 } from "./index";
 
 const icons = {
@@ -40,6 +41,7 @@ const icons = {
   currency: CurrencyExchangeIcon,
   timer: TimerIcon,
   bug: BugIcon,
+  setting: SettingIcon,
 };
 
 export default function Icon({
@@ -52,5 +54,13 @@ export default function Icon({
 }) {
   const SvgIcon = icons[name];
   if (!SvgIcon) return null;
-  return <SvgIcon size={size} color={color} width={width} height={height} rotate={rotate} />;
+  return (
+    <SvgIcon
+      size={size}
+      color={color}
+      width={width}
+      height={height}
+      rotate={rotate}
+    />
+  );
 }
