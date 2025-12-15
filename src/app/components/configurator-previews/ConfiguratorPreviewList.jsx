@@ -6,19 +6,19 @@ import styles from "./ConfiguratorPreviewList.module.css";
 import { configuratorContent } from "@/app/data/homepage/configurator";
 
 const ConfiguratorPreviewList = () => {
-  const { blueberryTravels, vdb, hrms } = configuratorContent();
+  const { armChair, modernAccentChair, winterJacket } = configuratorContent();
 
   const [configuratorsCard, setConfiguratorCard] = useState([
-    { data: blueberryTravels, status: false },
-    { data: vdb, status: true },
-    { data: hrms, status: false },
+    { data: armChair, status: false },
+    { data: modernAccentChair, status: true },
+    { data: winterJacket, status: false },
   ]);
 
   const handleActivate = (index) => {
-    setConfiguratorCard(prev =>
+    setConfiguratorCard((prev) =>
       prev.map((item, i) => ({
         ...item,
-        status: i === index
+        status: i === index,
       }))
     );
   };

@@ -12,27 +12,40 @@ const ConfiguratorPreviewCard = ({ data, status, onActivate }) => {
       className={`${styles.card} ${
         status ? styles.activeCard : styles.inactiveCard
       }`}
-      onMouseEnter={onActivate} // or replace with onClick for click behavior
+      onMouseEnter={onActivate} // desktop
+      onClick={onActivate} // mobile / tablet
     >
       <div className={styles.thumbnailWrapper}>
         <Image
-          src={data.thumbnail}
+          src={data.thumbnail_mobile}
           fill
-          alt={data.title}
-          className={styles.thumbnail}
+          alt={`${data.title} mobile`}
+          className={`${styles.thumbnail} ${
+            status ? styles.hidden : styles.visible
+          }`}
+        />
+
+        <Image
+          src={data.thumbnail_desktop}
+          fill
+          alt={`${data.title} desktop`}
+          className={`${styles.thumbnail} ${
+            status ? styles.visible : styles.hidden
+          }`}
         />
       </div>
 
-      {status && (
-        <div className={styles.content}>
-          <h2>{data.title}</h2>
-          <p>{data.contributions}</p>
-
-          <Link href={`${data.sandboxPath}`}>
-            <button>Go to Sandbox</button>
-          </Link>
-        </div>
-      )}
+      <div className={styles.content}>
+        <button
+          className={styles.ctaBtn}
+          onClick={(e) => {
+            e.stopPropagation(); // important
+            navigate.push(data.sandboxPath);
+          }}
+        >
+          Let's Try
+        </button>
+      </div>
     </div>
   );
 };

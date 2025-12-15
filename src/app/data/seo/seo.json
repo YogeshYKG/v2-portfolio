@@ -25,32 +25,32 @@
 
   "/3d-configurator": {
     "title": "3d Configurators | Yogesh Gupta — Fullstack Developer (MERN, MEAN, React, Node.js)",
-    "description": "Browse Yogesh Gupta’s project archive featuring fullstack and frontend web apps built using React, Next.js, Node.js, Express, and MongoDB. Includes UI experiments, SaaS dashboards, SEO tools, and 3D web experiences using Three.js and WebGL.",
-    "ogImage": "/og/archive.png",
+    "description": "Discover Yogesh Gupta's advanced 3D configurator projects, built with React Three Fiber, WebGL, and Next.js. These interactive demos highlight expertise in real-time 3D rendering, material customization, and seamless integration with full-stack MERN/MEAN architectures for e-commerce and visualization applications.",
+    "ogImage": "/og/modal1_desktop.webp",
     "canonical": "https://yourdomain.com/archive",
     "noindex": false
   },
 
   "/3d-configurator/arm-chair": {
-    "title": "Arm Chair 3D Configurator | Yogesh Gupta — Customize Colors, Materials, Textures",
-    "description": "Customize a premium 3D Arm Chair with real-time texture, material, and rotation controls. Built using React Three Fiber and WebGL, this interactive experience showcases photorealistic lighting and handcrafted GLTF models.",
-    "ogImage": "/og/arm-chair.png",
+    "title": "Arm Chair 3D Configurator | Yogesh Gupta – Advanced Customization with React Three Fiber",
+    "description": "Interact with a sophisticated 3D arm chair configurator featuring real-time adjustments for textures, materials, colors, and rotations. Engineered by Yogesh Gupta using React Three Fiber, WebGL, and photorealistic lighting techniques with custom GLTF models for immersive product experiences.",
+    "ogImage": "/og/modal1_desktop.webp",
     "canonical": "https://yourdomain.com/3d-configurator/arm-chair",
     "noindex": false
   },
 
-  "/3d-configurator/modern-accent-chair": {
-    "title": "Modern Accent Chair Configurator | Yogesh Gupta — Real-Time 3D Customization",
-    "description": "Experiment with materials, fabrics, and colors on the Modern Accent Chair in this fully interactive 3D configurator. Developed using React Three Fiber, drei, and PBR-based lighting for a high-realism product demo.",
-    "ogImage": "/og/modern-accent-chair.png",
+  "/3d-configurator/mordern-accent-chair": {
+    "title": "Modern Accent Chair 3D Configurator | Yogesh Gupta – Interactive Real-Time Customization",
+    "description": "Engage with a dynamic 3D configurator for the modern accent chair, allowing precise modifications to materials, fabrics, and colors. Developed by Yogesh Gupta utilizing React Three Fiber, Drei, and physically based rendering (PBR) for realistic, high-fidelity product demonstrations.",
+    "ogImage": "/og/modal2_desktop.webp",
     "canonical": "https://yourdomain.com/3d-configurator/modern-accent-chair",
     "noindex": false
   },
 
   "/3d-configurator/winter-jacket": {
-    "title": "Winter Jacket 3D Configurator | Yogesh Gupta — 3D Apparel Customization (WebGL)",
-    "description": "Customize a 3D Winter Jacket with different colors, fabrics, and lighting. A high-quality 3D WebGL experience showcasing Yogesh Gupta’s expertise in interactive product visualization using React Three Fiber and GLTF pipelines.",
-    "ogImage": "/og/winter-jacket.png",
+    "title": "Winter Jacket 3D Configurator | Yogesh Gupta – WebGL-Based Apparel Customization",
+    "description": "Customize a detailed 3D winter jacket with options for colors, fabrics, and lighting effects in this WebGL-powered application. Created by Yogesh Gupta, demonstrating proficiency in React Three Fiber, GLTF workflows, and interactive 3D visualization for apparel and e-commerce sectors.",
+    "ogImage": "/og/modal3_desktop.webp",
     "canonical": "https://yourdomain.com/3d-configurator/winter-jacket",
     "noindex": false
   },

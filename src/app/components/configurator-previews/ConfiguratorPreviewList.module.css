@@ -1,86 +1,313 @@
+/* =========================
+    WRAPPER
+  ========================= */
+
 .configuratorWrapper {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* mobile-first */
   gap: 1rem;
   width: 100%;
 }
 
-/* CARD BASE */
+/* =========================
+    CARD BASE
+  ========================= */
+
 .card {
   position: relative;
   overflow: hidden;
   border-radius: 18px;
   cursor: pointer;
+
   display: flex;
   align-items: center;
-  transition: all 0.45s ease;
+
   height: 180px;
   background: #000;
+
+  transition: flex 0.45s ease;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
-/* INACTIVE WIDTH */
+/* =========================
+    CARD STATES
+  ========================= */
+
+/* ✅ FIX: disable flex sizing on column layout (mobile) */
 .inactiveCard {
-  flex: 1;
+  flex: 0 0 auto; /* was flex: 1 */
+  border: 0.25px solid rgba(255, 255, 255, 0.2);
 }
 
-/* ACTIVE WIDTH EXPANDS ON X */
+/* mobile-first: no width expansion */
 .activeCard {
-  flex: 3;
+  flex: 0 0 auto; /* was flex: 1 */
 }
 
-/* THUMBNAIL */
+/* =========================
+    PREMIUM BORDER ANIMATION
+  ========================= */
+
+.activeCard::before {
+  content: "";
+  position: absolute;
+  inset: -8px; /* stronger on mobile */
+  border-radius: inherit;
+
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(255, 255, 255, 1) 70deg,
+    rgba(255, 255, 255, 0.4) 120deg,
+    transparent 180deg,
+    transparent 360deg
+  );
+
+  animation: rotateBorder 3.5s linear infinite;
+  filter: blur(4px);
+  z-index: 1;
+}
+
+/* soft mask */
+.activeCard::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border-radius: calc(18px - 4px);
+
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 1) 92%,
+    rgba(0, 0, 0, 0.85) 96%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+
+  z-index: 2;
+}
+
+@keyframes rotateBorder {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* keep real content above effects */
+.card > * {
+  position: relative;
+  z-index: 3;
+}
+
+/* =========================
+    THUMBNAILS
+  ========================= */
+
 .thumbnailWrapper {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
+.activeCard .thumbnailWrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0) 55%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* base image */
 .thumbnail {
+  position: absolute;
+  inset: 0;
   object-fit: cover;
-  transition: all 0.5s ease;
+
+  transition: opacity 0.45s ease, transform 0.6s ease, filter 0.45s ease;
 }
 
-/* IMAGE DARKEN WHEN ACTIVE */
-.activeCard .thumbnail {
-  filter: brightness(30%);
-  scale: 1.1;
+/* visibility states */
+.visible {
+  opacity: 1;
+  transform: scale(1.05);
 }
 
-/* CONTENT */
+.hidden {
+  opacity: 0;
+  transform: scale(1);
+  pointer-events: none;
+}
+
+/* =========================
+   MOBILE IMAGE OVERRIDE
+========================= */
+
+/* hide mobile thumbnails completely */
+.thumbnail[alt$="mobile"] {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+/* always show desktop thumbnails */
+.thumbnail[alt$="desktop"] {
+  opacity: 1 !important;
+  transform: scale(1.05);
+}
+
+/* active image polish */
+.activeCard .visible {
+  filter: brightness(90%);
+}
+
+/* =========================
+    CONTENT / CTA
+  ========================= */
+
+/* mobile-first: visible when active */
 .content {
   position: absolute;
   inset: 0;
-  padding: 2rem;
+
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
+
   opacity: 0;
-  transform: scaleX(0.6);
-  transform-origin: center;
-  transition: all 0.45s ease;
+  visibility: hidden;
+  transform: scale(0.96);
+
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  pointer-events: none;
 }
 
 .activeCard .content {
   opacity: 1;
-  transform: scaleX(1);
+  visibility: visible;
+  transform: scale(1);
+  pointer-events: auto;
 }
 
-/* Tablet */
+/* CTA button */
+.ctaBtn {
+  padding: 0.9rem 1.8rem;
+  border-radius: 999px;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(200, 200, 200, 0.85)
+  );
+
+  color: #000;
+  border: none;
+  cursor: pointer;
+
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.25),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ctaBtn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 16px 40px rgba(255, 255, 255, 0.35),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+    INTERACTION SAFETY
+  ========================= */
+
+.thumbnail,
+.thumbnailWrapper::after,
+.activeCard::before,
+.activeCard::after {
+  pointer-events: none;
+}
+
+/* =========================
+    TABLET+
+  ========================= */
+
 @media (min-width: 640px) {
-  /* styles for ≥640px */
+  /* reserved */
 }
 
-/* Desktop */
-@media (min-width: 1024px) {
-  /* styles for ≥1024px */
+/* =========================
+    DESKTOP (HOVER UX)
+  ========================= */
 
+@media (min-width: 1024px) {
   .configuratorWrapper {
     flex-direction: row;
   }
+
+  /* ✅ restore flex only for row layout */
+  .inactiveCard {
+    flex: 1;
+  }
+
+  /* width expansion only on desktop */
+  .activeCard {
+    flex: 3;
+  }
+
+  /* desktop border refinement */
+  .activeCard::before {
+    inset: -6px;
+    filter: blur(3px);
+    animation: rotateBorder 2.2s linear infinite;
+  }
+
+  /* hover-only CTA on desktop */
+  .activeCard .content {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.96);
+    pointer-events: none;
+  }
+
+  .activeCard:hover .content {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    pointer-events: auto;
+  }
+
+  /* restore visibility logic */
+  .thumbnail[alt$="mobile"].visible {
+    opacity: 1 !important;
+  }
+
+  .thumbnail[alt$="mobile"].hidden {
+    opacity: 0 !important;
+  }
+
+  .thumbnail[alt$="desktop"].visible {
+    opacity: 1 !important;
+  }
+
+  .thumbnail[alt$="desktop"].hidden {
+    opacity: 0 !important;
+  }
 }
 
-/* Large Screens */
+/* =========================
+    LARGE SCREENS
+  ========================= */
+
 @media (min-width: 1536px) {
-  /* styles for ≥1536px */
+  /* optional future refinements */
 }
