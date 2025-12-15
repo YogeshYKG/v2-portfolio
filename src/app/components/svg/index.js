@@ -16,3 +16,4 @@ export { default as ConfiguratorIcon } from "@/app/components/svg/Icons/Configur
 export { default as CurrencyExchangeIcon } from "@/app/components/svg/Icons/CurrencyExchangeIcon";
 export { default as TimerIcon } from "@/app/components/svg/Icons/TimerIcon";
 export { default as BugIcon } from "@/app/components/svg/Icons/BugIcon";
+export { default as SettingIcon } from "@/app/components/svg/Icons/SettingIcon";
