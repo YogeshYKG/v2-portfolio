@@ -1,7 +1,7 @@
 const blueberryTravels = {
   thumbnail: "/thumbnails/BBT_thumbnail.webp",
   title: "Blueberry Travels Website",
-  projectLink: "http://blueberrygroupnew.techbinary.net/",
+  projectLink: "https://blueberrytravel.com/",
   contributions:
     "Unified 30+ branch sites into one, cutting infra costs; integrated 12+ SaaS tools, SEO, multilingual, chatbot, and lead capture.",
   techStack: ["React", "Next.js", "Node", "Express.js", "Azure", "MySQL"],

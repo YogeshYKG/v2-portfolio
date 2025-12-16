@@ -1,0 +1,184 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.yogeshportfolio.in/#person",
+      "name": "Yogesh Gupta",
+      "alternateName": "Yogesh Gupta Fullstack Developer",
+      "url": "https://www.yogeshportfolio.in",
+      "image": "https://www.yogeshportfolio.in/og/profile_pic.png",
+      "jobTitle": [
+        "Frontend Developer",
+        "Fullstack Developer",
+        "Freelance Web Developer"
+      ],
+      "email": "mailto:guptayogesh484.dev@gmail.com",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "professional",
+          "email": "mailto:guptayogesh484.dev@gmail.com"
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "personal",
+          "email": "mailto:guptayogesh484.00@gmail.com"
+        }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/yogeshkrgupta/",
+        "https://github.com/YogeshYKG",
+        "https://leetcode.com/u/user4816XH/",
+        "https://codepen.io/codewithgyogesh"
+      ],
+      "knowsAbout": [
+        "React.js",
+        "Next.js",
+        "Node.js",
+        "MongoDB",
+        "Three.js",
+        "WebGL",
+        "SEO Optimization",
+        "Performance Optimization",
+        "Micro-Frontend Architecture",
+        "3D Configurators",
+        "Scalable Web Applications"
+      ],
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.yogeshportfolio.in/"
+      },
+      "worksFor": {
+        "@id": "https://blueberrygroup.co/#techbinary"
+      },
+      "alumniOf": [
+        { "@id": "https://vdbapp.com/#organization" },
+        { "@id": "https://raj.nic.in/#organization" }
+      ]
+    },
+
+    {
+      "@type": "WebSite",
+      "@id": "https://www.yogeshportfolio.in/#website",
+      "url": "https://www.yogeshportfolio.in/",
+      "name": "Yogesh Gupta Portfolio",
+      "publisher": {
+        "@id": "https://www.yogeshportfolio.in/#person"
+      }
+    },
+
+    {
+      "@type": "Organization",
+      "@id": "https://blueberrygroup.co/#techbinary",
+      "name": "Techbinary (Blueberry Group)",
+      "url": "https://blueberrygroup.co",
+      "member": {
+        "@type": "Role",
+        "roleName": "Fullstack Developer",
+        "startDate": "2025-03",
+        "member": {
+          "@id": "https://www.yogeshportfolio.in/#person"
+        },
+        "description": "Scaled a role-based CRM to 5k+ DAU with 99.9% uptime, built reusable React/MUI libraries reducing development time by 30%, optimized APIs handling 1M+ monthly requests, launched a multilingual travel platform improving SEO and lead generation, and delivered an HRMS automating workflows for 3k+ employees."
+      }
+    },
+
+    {
+      "@type": "Organization",
+      "@id": "https://vdbapp.com/#organization",
+      "name": "Virtual Diamond Boutique (VDB)",
+      "url": "https://vdbapp.com",
+      "member": {
+        "@type": "Role",
+        "roleName": "Consultant",
+        "startDate": "2022-09",
+        "endDate": "2025-02",
+        "member": {
+          "@id": "https://www.yogeshportfolio.in/#person"
+        },
+        "description": "Architected a 3D jewelry configurator with 1200+ combinations, introduced micro-frontend architecture, productized signup SaaS adopted by 400+ B2B clients, and enhanced Shopify storefront UX, search, and performance."
+      }
+    },
+
+    {
+      "@type": "Organization",
+      "@id": "https://raj.nic.in/#organization",
+      "name": "National Informatics Center (NIC)",
+      "url": "https://raj.nic.in",
+      "member": {
+        "@type": "Role",
+        "roleName": "Database Architect Intern",
+        "startDate": "2021-05",
+        "endDate": "2021-07",
+        "member": {
+          "@id": "https://www.yogeshportfolio.in/#person"
+        },
+        "description": "Designed and optimized MySQL schemas and built internal PHP modules for government applications during internship."
+      }
+    },
+
+    {
+      "@type": "WebSite",
+      "@id": "https://blueberrytravel.com/#website",
+      "name": "Blueberry Travel",
+      "url": "https://blueberrytravel.com/",
+      "creator": {
+        "@id": "https://www.yogeshportfolio.in/#person"
+      },
+      "description": "Blueberry Travel is a travel management platform offering global business and leisure travel solutions, including flight booking, hotel reservations, car rentals, tour packages, and visa assistance, with personalized itineraries and 24/7 customer support.",
+      "inLanguage": "en",
+      "about": [
+        { "@type": "Thing", "name": "Corporate Travel Management" },
+        { "@type": "Thing", "name": "Flight Booking" },
+        { "@type": "Thing", "name": "Hotel Reservations" },
+        { "@type": "Thing", "name": "Tour and Holiday Packages" },
+        { "@type": "Thing", "name": "Visa and Travel Assistance" }
+      ],
+      "keywords": [
+        "Web Check In",
+        "Global Travel Solutions",
+        "Corporate Travel Services",
+        "Hotel Booking",
+        "Visa Assistance",
+        "Tour Packages",
+        "Personalized Itineraries"
+      ],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://blueberrytravel.com/search?q={search_term}",
+        "query-input": "required name=search_term"
+      }
+    },
+
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://vdbapp.com/#application",
+      "name": "VDB Marketplace",
+      "url": "https://vdbapp.com/",
+      "applicationCategory": "ECommerceApplication",
+      "applicationSubCategory": "JewelryMarketplace",
+      "operatingSystem": "Web",
+      "creator": {
+        "@id": "https://www.yogeshportfolio.in/#person"
+      },
+      "publisher": {
+        "@id": "https://vdbapp.com/#organization"
+      },
+      "description": "Jewelry marketplace with advanced filtering, white-label onboarding, and a real-time 3D configurator supporting 1200+ stone–ring combinations."
+    },
+
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.yogeshportfolio.in/#internal-hrms",
+      "name": "Internal HRMS",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "HumanResourcesApplication",
+      "operatingSystem": "Web",
+      "creator": {
+        "@id": "https://www.yogeshportfolio.in/#person"
+      },
+      "description": "Internal HRMS automating recruitment, attendance, and travel workflows for 3k+ employees using WhatsApp API and email triggers, reducing manual effort by 40%."
+    }
+  ]
+}

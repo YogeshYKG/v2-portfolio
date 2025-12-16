@@ -2,7 +2,7 @@ const techbinary = {
   tenure: "March 2025 – Present",
   role: "Fullstack Developer",
   employer: "Techbinary · Unit of Blueberry Groups",
-  employerLink: "http://blueberrygroupnew.techbinary.net/",
+  employerLink: "https://blueberrygroup.co/",
   // caseStudySlug: "techbinary",
   contributions: 
     "At Techbinary, I scaled a role-based CRM to 5k+ DAU with 99.9% uptime, cutting task turnaround by 25%. I built reusable React/MUI libraries that reduced development time by 30%, optimized APIs and databases to handle 1M+ monthly requests with 250ms faster responses, launched a multilingual travel site that improved SEO and lead generation, and delivered an HRMS for 3k+ employees, automating workflows and saving 200+ hours per month.",

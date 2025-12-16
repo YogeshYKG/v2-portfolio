@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 
 import CursorOverlay from "@/app/components/cursorOverlay/CursorOverlay";
+import SchemaData from "@/app/data/schema/schema.json";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,51 +31,7 @@ const defaultCssVariables = {
 };
 
 export default function RootLayout({ children }) {
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Yogesh Gupta",
-    jobTitle: "Frontend & Fullstack Developer",
-    url: "https://www.yogeshportfolio.in",
-    sameAs: [
-      "https://www.linkedin.com/in/yogeshkrgupta/",
-      "https://github.com/YogeshYKG",
-      "https://leetcode.com/u/user4816XH/",
-      "guptayogesh484.dev@gmail.com",
-    ],
-    knowsAbout: [
-      "React.js",
-      "Next.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "MERN Stack",
-      "MEAN Stack",
-      "JavaScript (ES6+)",
-      "TypeScript",
-      "HTML5",
-      "CSS3",
-      "Tailwind CSS",
-      "Material UI (MUI)",
-      "RESTful APIs",
-      "JWT Authentication",
-      "Performance Optimization",
-      "SEO Optimization",
-      "Responsive Web Design",
-      "Web Accessibility (a11y)",
-      "Three.js",
-      "WebGL",
-      "Framer Motion",
-      "Redux",
-      "Git & GitHub",
-      "CI/CD Deployment",
-      "Project Architecture",
-      "Fullstack Web Development",
-      "UI/UX Implementation",
-      "Cross-Browser Compatibility",
-    ],
-  };
-
+  const schemaData = SchemaData;
   return (
     <html lang="en">
       <head>
@@ -83,8 +40,11 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
-        
-        <meta name="google-site-verification" content="a70nfR9rFk6Mdzi4oMhB9jOiW3lSCosad2fhr_j6loQ" />
+
+        <meta
+          name="google-site-verification"
+          content="a70nfR9rFk6Mdzi4oMhB9jOiW3lSCosad2fhr_j6loQ"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable}`}

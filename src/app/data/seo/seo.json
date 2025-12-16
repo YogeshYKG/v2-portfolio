@@ -27,7 +27,7 @@
     "title": "3d Configurators | Yogesh Gupta — Fullstack Developer (MERN, MEAN, React, Node.js)",
     "description": "Discover Yogesh Gupta's advanced 3D configurator projects, built with React Three Fiber, WebGL, and Next.js. These interactive demos highlight expertise in real-time 3D rendering, material customization, and seamless integration with full-stack MERN/MEAN architectures for e-commerce and visualization applications.",
     "ogImage": "/og/modal1_desktop.webp",
-    "canonical": "https://yourdomain.com/archive",
+    "canonical": "https://yourdomain.com/3d-configurator",
     "noindex": false
   },
 
