@@ -4,6 +4,7 @@ import "./globals.css";
 
 import CursorOverlay from "@/app/components/cursorOverlay/CursorOverlay";
 import SchemaData from "@/app/data/schema/schema.json";
+import SupportWidget from "@/app/components/supportWidget/SupportWidget";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -51,6 +52,7 @@ export default function RootLayout({ children }) {
         style={defaultCssVariables}
       >
         <CursorOverlay />
+        <SupportWidget />
         {children}
       </body>
     </html>

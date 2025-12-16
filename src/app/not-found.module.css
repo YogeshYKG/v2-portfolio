@@ -132,6 +132,7 @@
   gap: 0.5rem;
   text-decoration: none;
   border: none;
+  transition: all 0.2s ease;
 }
 
 .homeButton {
@@ -144,11 +145,13 @@
 }
 
 .reportButton {
-  color: var(--text-slate);
+  background: var(--text-slate-muted);
+  color: var(--shade-green);
 }
 
 .reportButton:hover {
-  color: var(--text-green);
+  color: var(--text-slate);
+  background: var(--shade-green);
 }
 
 /* Responsive */
