@@ -43,7 +43,7 @@ const ConfiguratorPreviewCard = ({ data, status, onActivate }) => {
             navigate.push(data.sandboxPath);
           }}
         >
-          Let's Try
+          {`View Model`}
         </button>
       </div>
     </div>
