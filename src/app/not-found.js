@@ -1,6 +1,7 @@
+import { Suspense } from "react";
+
 import { getSeoMetaData } from "./data/seo/seo";
 import NotFoundComponent from "./notFound";
-
 
 export async function generateMetadata() {
   return getSeoMetaData("/");
@@ -8,6 +9,8 @@ export async function generateMetadata() {
 
 export default function NotFound() {
   return (
-    <NotFoundComponent />
+    <Suspense fallback={null}>
+      <NotFoundComponent />
+    </Suspense>
   );
 }

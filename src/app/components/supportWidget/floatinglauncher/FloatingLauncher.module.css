@@ -1,0 +1,97 @@
+.wrapper {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 100;
+}
+
+/* ===== Main FAB ===== */
+.main {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+
+  background: var(--text-slate-muted);
+  color: var(--shade-green);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.main:hover {
+  background: var(--shade-green);
+  color: var(--text-slate);
+}
+
+.mainOpen {
+  transform: rotate(45deg);
+}
+
+/* ===== Action buttons ===== */
+.action {
+  position: absolute;
+  bottom: 0;
+
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+
+  border: 1px solid var(--text-mute);
+  background: var(--body-background);
+  color: var(--text-slate);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transform: translate(0, 0) scale(0.6);
+  filter: brightness(1) contrast(1);
+
+  transition: transform 0.3s ease, opacity 0.2s ease, filter 0.2s ease,
+    background 0.2s ease, border-color 0.2s ease;
+}
+
+/* Thumbnail */
+.thumb {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ===== Open state ===== */
+.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(var(--x), var(--y)) scale(1);
+}
+
+/* ===== Interaction states ===== */
+
+/* Default */
+.action[data-state="default"] {
+  filter: brightness(1) contrast(1);
+
+}
+
+/* Active (hover / first tap) */
+.action[data-state="active"] {
+  background: var(--shade-green);
+  border-color: var(--text-green);
+  color: var(--text-slate);
+
+  filter: brightness(1.15) contrast(1.1);
+  transform: translate(var(--x), var(--y)) scale(1.08);
+}
+
+/* Inactive (siblings dimmed) */
+.action[data-state="inactive"] {
+  opacity: 0.55;
+  filter: brightness(0.6) contrast(0.8);
+}

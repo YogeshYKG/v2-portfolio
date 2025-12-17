@@ -1,0 +1,51 @@
+.contactWrapper {
+  margin-top: 0.8rem;
+}
+
+.contactBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--text-slate-muted);
+  color: var(--shade-green);
+  border: 2px solid var(--text-slate-muted);
+  border-radius: 0.5rem;
+  font-weight: 540;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.contactBtn span {
+  display: inline-block;
+  transition: transform 0.2s ease;
+  font-size: 1rem;
+}
+
+/* Slight bouncy effect */
+.contactBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  background-color: var(--shade-green);
+  color: var(--text-slate-muted);
+  border: 2px solid var(--text-green);
+}
+
+.contactBtn:active {
+  transform: scale(0.95);
+}
+
+/* Optional: toggle active state with slight pulse */
+.contactBtn.active span {
+  animation: bounce 0.4s ease-in-out;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
