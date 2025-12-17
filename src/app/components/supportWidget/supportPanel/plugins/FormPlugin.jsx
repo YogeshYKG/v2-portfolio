@@ -33,16 +33,19 @@ const FormPlugin = ({ hasAttachment = true }) => {
     );
   }
 
-  // Dynamic content based on hasAttachment
   const descText = !hasAttachment
     ? "Have a project, collaboration, or question? Drop a message — I usually reply within a day."
     : "Found a bug or issue on the site? Please describe it below so we can fix it.";
+
   const textareaPlaceholder = !hasAttachment
     ? "Tell me a bit about what you’re looking for…"
     : "Describe the bug or issue in detail…";
 
   return (
-    <form className={styles.wrapper} onSubmit={handleSubmit}>
+    <form
+      className={`${styles.wrapper} ${styles.form}`}
+      onSubmit={handleSubmit}
+    >
       <p className={styles.desc}>{descText}</p>
 
       <input name="name" placeholder="Your name" required />
@@ -52,15 +55,27 @@ const FormPlugin = ({ hasAttachment = true }) => {
         placeholder={textareaPlaceholder}
         required
       />
+
       <input
         type="hidden"
         name="pageURL"
         value={typeof window !== "undefined" ? window.location.href : ""}
       />
+
       {hasAttachment && <input type="file" name="attachment" />}
 
-      <button type="submit" disabled={loading}>
-        {loading ? <span className={styles.spinner}></span> : !hasAttachment ? "Send message" : "Report Issue"}
+      <button
+        type="submit"
+        className={styles.primaryBtn}
+        disabled={loading}
+      >
+        {loading ? (
+          <span className={styles.spinner} />
+        ) : !hasAttachment ? (
+          "Send message"
+        ) : (
+          "Report Issue"
+        )}
       </button>
     </form>
   );

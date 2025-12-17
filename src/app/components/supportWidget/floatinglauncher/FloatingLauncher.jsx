@@ -9,15 +9,28 @@ import Tooltip from "../../tooltip/Tooltip";
 
 const ACTIONS = [
   {
+    id: "support",
+    icon: { label: "like", size: 24 },
+    cta: { type: "query", key: "support", value: "donate" },
+    tooltipLabel: "Support My Work",
+  },
+  {
+    id: "bugForm",
+    icon: { label: "bug", size: 20 },
+    image: null,
+    cta: { type: "query", key: "support", value: "bug" },
+    tooltipLabel: "Report Issue",
+  },
+  {
     id: "contactForm",
-    icon: "leadcapture",
+    icon: { label: "leadcapture", size: 18 },
     image: null,
     cta: { type: "query", key: "support", value: "form" },
     tooltipLabel: "Contact Form",
   },
   {
     id: "projectArchive",
-    icon: "configurator",
+    icon: { label: "configurator", size: 18 },
     image: null,
     cta: { type: "route", value: "/archive" },
     tooltipLabel: "Project Archieve",
@@ -128,7 +141,9 @@ const FloatingLauncher = () => {
             }}
           >
             <Tooltip content={item.tooltipLabel}>
-              {item.icon && <Icon name={item.icon} size={18} />}
+              {item.icon && (
+                <Icon name={item.icon.label} size={item.icon.size} />
+              )}
               {item.image && (
                 <Image
                   src={item.image}
@@ -151,7 +166,7 @@ const FloatingLauncher = () => {
         }}
         aria-label="Open assistant"
       >
-        <Icon name="clip" size={22} />
+        <Icon name="reactor" size={32} paused={open} />
       </button>
     </div>
   );

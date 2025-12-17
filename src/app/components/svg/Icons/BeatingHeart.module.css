@@ -1,0 +1,80 @@
+.beatingHeart {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+}
+
+/* Shared frame base */
+.heartFrame {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+/* ───────────────────────────── */
+/* 1️⃣ Idle outline (never hidden) */
+/* ───────────────────────────── */
+.frame1 {
+  opacity: 1;
+  transform: scale(0.96);
+  animation: beat-idle 1.45s infinite;
+}
+
+/* ───────────────────────────── */
+/* 2–4️⃣ Beat layers              */
+/* ───────────────────────────── */
+.frame2,
+.frame3,
+.frame4 {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: beat 1.45s infinite;
+}
+
+.frame2 { animation-delay: 0.16s; }
+.frame3 { animation-delay: 0.32s; }
+.frame4 { animation-delay: 0.52s; }
+
+/* Glow */
+.glow {
+  filter: drop-shadow(0 0 6px rgba(0, 255, 190, 0.55));
+}
+
+/* Main beat animation */
+@keyframes beat {
+  0%   { opacity: 0;   transform: scale(0.88); }
+  12%  { opacity: 1;   transform: scale(1.08); }
+  22%  { opacity: 0.8; transform: scale(0.98); }
+  45%  { opacity: 0;   transform: scale(0.9); }
+  100% { opacity: 0; }
+}
+
+/* Idle pulse (outline stays visible) */
+@keyframes beat-idle {
+  0%   { transform: scale(0.96); }
+  20%  { transform: scale(1.01); }
+  100% { transform: scale(0.96); }
+}
+
+/* Pause control */
+.paused .heartFrame {
+  animation-play-state: paused;
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Hover acceleration */
+.beatingHeart:hover .heartFrame {
+  animation-duration: 1.1s;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .heartFrame {
+    animation: none;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
