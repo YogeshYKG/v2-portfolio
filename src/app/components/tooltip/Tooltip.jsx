@@ -33,6 +33,14 @@ const Tooltip = ({ content, children }) => {
         onMouseLeave={hideTooltip}
         onFocus={showTooltip}
         onBlur={hideTooltip}
+        onTouchStart={(e) => {
+          e.stopPropagation(); // prevent button click
+          showTooltip();
+        }}
+        onTouchEnd={() => {
+          // optional: auto-hide after tap
+          setTimeout(hideTooltip, 1200);
+        }}
       >
         {children}
       </span>
