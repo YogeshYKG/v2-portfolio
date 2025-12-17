@@ -1,5 +1,6 @@
 // src/app/components/svg/Icon.jsx
 "use client";
+
 import {
   LineIcon,
   GithubIcon,
@@ -20,6 +21,8 @@ import {
   TimerIcon,
   BugIcon,
   SettingIcon,
+  LikeIcon,
+  BeatingHeartIcon,
 } from "./index";
 
 const icons = {
@@ -42,6 +45,8 @@ const icons = {
   timer: TimerIcon,
   bug: BugIcon,
   setting: SettingIcon,
+  like: LikeIcon,
+  reactor: BeatingHeartIcon,
 };
 
 export default function Icon({
@@ -51,6 +56,7 @@ export default function Icon({
   width = 24,
   height = 24,
   rotate = null,
+  paused = false,
 }) {
   const SvgIcon = icons[name];
   if (!SvgIcon) return null;
@@ -61,6 +67,7 @@ export default function Icon({
       width={width}
       height={height}
       rotate={rotate}
+      paused={paused}
     />
   );
 }

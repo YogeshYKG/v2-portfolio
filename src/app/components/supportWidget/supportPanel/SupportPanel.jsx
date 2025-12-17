@@ -8,16 +8,39 @@ import FormPlugin from "./plugins/FormPlugin";
 import ChatPlugin from "./plugins/ChatPlugin";
 import FaqPlugin from "./plugins/FaqPlugin";
 import AgentPlugin from "./plugins/AgentPlugin";
+import DonatePlugin from "./plugins/DonatePlugin";
 
 const PANEL_MAP = {
-  bug: { title: "Report Issue", component: <FormPlugin /> },
+  donate: {
+    title: "Support the Developer ☕",
+    component: <DonatePlugin />,
+    footer: "Secure payments via Razorpay • UPI • Cards • Wallets",
+  },
+  bug: {
+    title: "Report Issue",
+    component: <FormPlugin />,
+    footer: "Your report helps improve the experience",
+  },
   form: {
     title: "Contact Form",
     component: <FormPlugin hasAttachment={false} />,
+    footer: "Typically replies within a few hours",
   },
-  chat: { title: "Chatbot", component: <ChatPlugin /> },
-  faq: { title: "FAQ", component: <FaqPlugin /> },
-  agent: { title: "Live Agent", component: <AgentPlugin /> },
+  chat: {
+    title: "Chatbot",
+    component: <ChatPlugin />,
+    footer: "Instant answers for common questions",
+  },
+  faq: {
+    title: "FAQ",
+    component: <FaqPlugin />,
+    footer: "Quick answers to common queries",
+  },
+  agent: {
+    title: "Live Agent",
+    component: <AgentPlugin />,
+    footer: "Connect with a human support agent",
+  },
 };
 
 const SupportPanel = () => {
@@ -66,7 +89,7 @@ const SupportPanel = () => {
 
       <footer className={styles.footer}>
         <span className={styles.hint}>
-          Typically replies within a few hours
+          {active?.footer ?? "Typically replies within a few hours"}
         </span>
       </footer>
     </aside>
