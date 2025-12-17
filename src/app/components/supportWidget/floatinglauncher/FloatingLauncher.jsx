@@ -140,7 +140,10 @@ const FloatingLauncher = () => {
               }
             }}
           >
-            <Tooltip content={item.tooltipLabel}>
+            <Tooltip
+              key={`${open}-${activeIndex === index}`}
+              content={item.tooltipLabel}
+            >
               {item.icon && (
                 <Icon name={item.icon.label} size={item.icon.size} />
               )}
