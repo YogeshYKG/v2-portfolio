@@ -1,3 +1,7 @@
+/* ======================
+   Base plugin layout
+====================== */
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -9,9 +13,12 @@
   color: var(--text-slate-muted);
 }
 
-/* ✅ Scoped selectors */
-.wrapper input,
-.wrapper textarea {
+/* ======================
+   Form-specific styles
+====================== */
+
+.form input,
+.form textarea {
   padding: 0.5rem;
   border-radius: 8px;
   border: 1px solid var(--text-mute);
@@ -19,12 +26,12 @@
   color: var(--text-slate);
 }
 
-.wrapper textarea {
+.form textarea {
   resize: none;
   min-height: 80px;
 }
 
-.wrapper button {
+.primaryBtn {
   margin-top: 0.5rem;
   padding: 0.55rem;
   border-radius: 8px;
@@ -35,7 +42,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 4px;
 }
+
+/* Spinner */
 
 .spinner {
   border: 3px solid rgba(0, 0, 0, 0.1);
@@ -52,21 +62,59 @@
   }
 }
 
-/* Style the native file input */
-.wrapper input[type="file"] {
+/* File input */
+
+.form input[type="file"] {
   border-radius: 8px;
   border: 1px solid var(--text-mute);
   background: var(--body-background);
   color: var(--text-slate);
 }
 
-/* Style the "Choose File" button inside the input */
-.wrapper input[type="file"]::file-selector-button {
+.form input[type="file"]::file-selector-button {
   padding: 0.55rem;
   border-radius: 8px;
   border: none;
   background: var(--shade-green);
   color: var(--text-slate);
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+}
+
+/* ======================
+   Donate-specific styles
+====================== */
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.donateBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.55rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid var(--text-mute);
+  background: var(--body-background);
+  color: var(--text-slate);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.donateBtn:hover {
+  background: var(--shade-green);
+  transform: translateY(-1px);
+}
+
+.donateBtn strong {
+  font-weight: 600;
+}
+
+.note {
+  font-size: 0.7rem;
+  color: var(--text-slate-muted);
+  text-align: center;
+  margin-top: 0.25rem;
 }

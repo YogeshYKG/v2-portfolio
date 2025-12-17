@@ -17,3 +17,5 @@ export { default as CurrencyExchangeIcon } from "@/app/components/svg/Icons/Curr
 export { default as TimerIcon } from "@/app/components/svg/Icons/TimerIcon";
 export { default as BugIcon } from "@/app/components/svg/Icons/BugIcon";
 export { default as SettingIcon } from "@/app/components/svg/Icons/SettingIcon";
+export { default as LikeIcon } from "@/app/components/svg/Icons/LikeIcon";
+export { default as BeatingHeartIcon } from "@/app/components/svg/Icons/BeatingHeartIcon";
