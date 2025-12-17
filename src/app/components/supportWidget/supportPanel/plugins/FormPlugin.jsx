@@ -60,7 +60,7 @@ const FormPlugin = ({ hasAttachment = true }) => {
       {hasAttachment && <input type="file" name="attachment" />}
 
       <button type="submit" disabled={loading}>
-        {loading ? <span className={styles.spinner}></span> : hasAttachment ? "Send message" : "Report Issue"}
+        {loading ? <span className={styles.spinner}></span> : !hasAttachment ? "Send message" : "Report Issue"}
       </button>
     </form>
   );
