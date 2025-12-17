@@ -18,13 +18,13 @@ export default function Navbar() {
 
   // smooth scroll on click
   const handleScroll = useCallback((id, offset = 80) => {
-    const section = document.getElementById(id);
-    if (section) {
-      const y =
-        section.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }
-  }, []);
+  const section = document.getElementById(id);
+  if (section) {
+    const y = section.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  }
+}, []);
+
 
   // scroll spy: detect which section is in view
   useEffect(() => {
@@ -100,7 +100,6 @@ export default function Navbar() {
           </div>
         );
       })}
-
     </div>
   );
 }

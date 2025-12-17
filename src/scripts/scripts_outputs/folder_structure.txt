@@ -19,19 +19,14 @@ src/
 │   │       └── page.module.css                    
 │   ├── components                              
 │   │   ├── 3d-models                                
-│   │   │   ├── Arm_Chair__Furniture.jsx                                   
-│   │   │   ├── Arm_Chair__Furniture_default.jsx                           
-│   │   │   ├── Living_Room_Sofa__Furniture.jsx                            
-│   │   │   ├── Living_Room_Sofa__Furniture_default.jsx                    
-│   │   │   ├── Winter_Jacket.jsx                                          
-│   │   │   └── Winter_Jacket_default.jsx                                  
+│   │   │   ├── Arm_Chair__Furniture.jsx                            
+│   │   │   ├── Arm_Chair__Furniture_default.jsx                    
+│   │   │   ├── Living_Room_Sofa__Furniture.jsx                     
+│   │   │   ├── Winter_Jacket.jsx                                   
+│   │   │   └── Winter_Jacket_default.jsx                           
 │   │   ├── about                                    
 │   │   │   ├── About.jsx                           
 │   │   │   └── About.module.css                    
-│   │   ├── buttons                                  
-│   │   │   └── contactButton                    
-│   │   │       ├── ContactButton.jsx                           
-│   │   │       └── ContactButton.module.css                    
 │   │   ├── configurator-previews                    
 │   │   │   ├── ConfiguratorPreviewCard.jsx                           
 │   │   │   ├── ConfiguratorPreviewList.jsx                           
@@ -69,47 +64,29 @@ src/
 │   │   ├── project_archive_table                    
 │   │   │   ├── ProjectArchive.jsx                           
 │   │   │   └── ProjectArchive.module.css                    
-│   │   ├── supportWidget                            
-│   │   │   ├── floatinglauncher                            
-│   │   │   │   ├── FloatingLauncher.jsx                           
-│   │   │   │   └── FloatingLauncher.module.css                    
-│   │   │   ├── supportPanel                                
-│   │   │   │   ├── plugins                                    
-│   │   │   │   │   ├── AgentPlugin.jsx                      
-│   │   │   │   │   ├── ChatPlugin.jsx                       
-│   │   │   │   │   ├── FaqPlugin.jsx                        
-│   │   │   │   │   ├── FormPlugin.jsx                       
-│   │   │   │   │   └── Plugin.module.css                    
-│   │   │   │   ├── SupportPanel.jsx                           
-│   │   │   │   └── SupportPanel.module.css                    
-│   │   │   ├── SupportWidget.jsx                           
-│   │   │   └── SupportWidget.module.css                    
-│   │   ├── svg                                      
-│   │   │   ├── Icon.jsx                    
-│   │   │   ├── Icons                       
-│   │   │   │   ├── ArrowIcon.jsx                               
-│   │   │   │   ├── BugIcon.jsx                                 
-│   │   │   │   ├── ChatbotIcon.jsx                             
-│   │   │   │   ├── ClipIcon.jsx                                
-│   │   │   │   ├── CodepenIcon.jsx                             
-│   │   │   │   ├── ConfiguratorIcon.jsx                        
-│   │   │   │   ├── CurrencyExchangeIcon.jsx                    
-│   │   │   │   ├── ErrorIcon.jsx                               
-│   │   │   │   ├── GithubIcon.jsx                              
-│   │   │   │   ├── GlobeIcon.jsx                               
-│   │   │   │   ├── InstagramIcon.jsx                           
-│   │   │   │   ├── LanguageIcon.jsx                            
-│   │   │   │   ├── LineIcon.jsx                                
-│   │   │   │   ├── LinkedinIcon.jsx                            
-│   │   │   │   ├── MailIcon.jsx                                
-│   │   │   │   ├── PlaystoreIcon.jsx                           
-│   │   │   │   ├── SettingIcon.jsx                             
-│   │   │   │   ├── TimerIcon.jsx                               
-│   │   │   │   └── UserAddIcon.jsx                             
-│   │   │   └── index.js                    
-│   │   └── tooltip                                  
-│   │       ├── Tooltip.jsx                           
-│   │       └── Tooltip.module.css                    
+│   │   └── svg                                      
+│   │       ├── Icon.jsx                    
+│   │       ├── Icons                       
+│   │       │   ├── ArrowIcon.jsx                               
+│   │       │   ├── BugIcon.jsx                                 
+│   │       │   ├── ChatbotIcon.jsx                             
+│   │       │   ├── ClipIcon.jsx                                
+│   │       │   ├── CodepenIcon.jsx                             
+│   │       │   ├── ConfiguratorIcon.jsx                        
+│   │       │   ├── CurrencyExchangeIcon.jsx                    
+│   │       │   ├── ErrorIcon.jsx                               
+│   │       │   ├── GithubIcon.jsx                              
+│   │       │   ├── GlobeIcon.jsx                               
+│   │       │   ├── InstagramIcon.jsx                           
+│   │       │   ├── LanguageIcon.jsx                            
+│   │       │   ├── LineIcon.jsx                                
+│   │       │   ├── LinkedinIcon.jsx                            
+│   │       │   ├── MailIcon.jsx                                
+│   │       │   ├── PlaystoreIcon.jsx                           
+│   │       │   ├── SettingIcon.jsx                             
+│   │       │   ├── TimerIcon.jsx                               
+│   │       │   └── UserAddIcon.jsx                             
+│   │       └── index.js                    
 │   ├── data                                    
 │   │   ├── archive                     
 │   │   │   └── projectArchive.js                    
@@ -119,8 +96,6 @@ src/
 │   │   │   ├── experience.js                      
 │   │   │   ├── projects.js                        
 │   │   │   └── userInfo.js                        
-│   │   ├── schema                      
-│   │   │   └── schema.json                    
 │   │   └── seo                         
 │   │       ├── seo.js                      
 │   │       └── seo.json                    

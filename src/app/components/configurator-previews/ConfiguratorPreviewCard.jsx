@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 import styles from "./ConfiguratorPreviewList.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import Icon from "@/app/components/svg/Icon";
 
 const ConfiguratorPreviewCard = ({ data, status, onActivate }) => {
   const navigate = useRouter();
@@ -38,14 +37,13 @@ const ConfiguratorPreviewCard = ({ data, status, onActivate }) => {
 
       <div className={styles.content}>
         <button
-          className={`${styles.contactBtn}`}
+          className={styles.ctaBtn}
           onClick={(e) => {
             e.stopPropagation(); // important
             navigate.push(data.sandboxPath);
           }}
         >
-          <span>{`View Model`}</span>
-          <Icon name="arrow" size={24} color="currentColor" />
+          {`View Model`}
         </button>
       </div>
     </div>
