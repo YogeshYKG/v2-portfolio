@@ -35,7 +35,6 @@
 /* ===== Action buttons ===== */
 .action {
   position: absolute;
-  right: 0;
   bottom: 0;
 
   width: 42px;
@@ -56,12 +55,8 @@
   transform: translate(0, 0) scale(0.6);
   filter: brightness(1) contrast(1);
 
-  transition:
-    transform 0.3s ease,
-    opacity 0.2s ease,
-    filter 0.2s ease,
-    background 0.2s ease,
-    border-color 0.2s ease;
+  transition: transform 0.3s ease, opacity 0.2s ease, filter 0.2s ease,
+    background 0.2s ease, border-color 0.2s ease;
 }
 
 /* Thumbnail */
@@ -82,6 +77,7 @@
 /* Default */
 .action[data-state="default"] {
   filter: brightness(1) contrast(1);
+
 }
 
 /* Active (hover / first tap) */

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import Icon from "@/app/components/svg/Icon";
 import { usePathname, useRouter } from "next/navigation";
 import styles from "./page.module.css";
@@ -10,6 +10,7 @@ import {
   ModelCustomizationProvider,
   useModelCustomization,
 } from "@/app/components/context/ModelCustomization";
+import SupportWidget from "@/app/components/supportWidget/SupportWidget";
 
 const ConfiguratorContent = () => {
   const pathname = usePathname();
@@ -43,6 +44,9 @@ const ConfiguratorContent = () => {
 
   return (
     <>
+      <Suspense fallback={null}>
+        <SupportWidget />
+      </Suspense>
       <div className={styles.configuratorWrapper}>
         <ConfiguratorViewer />
       </div>

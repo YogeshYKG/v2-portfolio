@@ -7,11 +7,20 @@
   position: fixed;
   z-index: 10000;
 
-  padding: 8px 12px;
-  border-radius: 6px;
-
+  /* theme */
   background: var(--shade-green);
   color: var(--text-slate);
+
+  /* border */
+  --tooltip-border: color-mix(
+    in srgb,
+    var(--text-slate) 70%,
+    black 30%
+  );
+  border: 1px solid var(--tooltip-border);
+
+  padding: 8px 12px;
+  border-radius: 6px;
 
   font-size: 12px;
   line-height: 1.4;
@@ -38,11 +47,14 @@
 .tooltip::after {
   content: "";
   position: absolute;
-  right: -4px;
+  right: -6px;
   top: 50%;
   transform: translateY(-50%) rotate(45deg);
 
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
+
   background: var(--shade-green);
+  border-top: 1px solid var(--tooltip-border);
+  border-right: 1px solid var(--tooltip-border);
 }

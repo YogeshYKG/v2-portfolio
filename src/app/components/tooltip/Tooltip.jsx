@@ -16,7 +16,7 @@ const Tooltip = ({ content, children }) => {
 
     setCoords({
       top: rect.top + rect.height / 2,
-      left: rect.left - 10,
+      left: rect.left - 24,
     });
 
     setVisible(true);
@@ -40,7 +40,7 @@ const Tooltip = ({ content, children }) => {
       {visible &&
         createPortal(
           <span
-            className={styles.tooltip}
+            className={`${styles.tooltip} ${styles.visible}`}
             style={{
               top: coords.top,
               left: coords.left,
