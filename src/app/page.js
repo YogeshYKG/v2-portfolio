@@ -1,3 +1,5 @@
+
+
 import styles from "./page.module.css";
 import Navbar from "@/app/components/navbar/Navbar";
 import About from "@/app/components/about/About";
@@ -7,7 +9,6 @@ import ConfiguratorPreviewList from "@/app/components/configurator-previews/Conf
 import Credits from "./components/credits/Credits";
 
 import Icon from "@/app/components/svg/Icon";
-import ContactButton from "@/app/components/buttons/contactButton/ContactButton";
 
 import userInfo from "./data/homepage/userInfo";
 import { getSeoMetaData } from "./data/seo/seo";
@@ -29,8 +30,6 @@ export default function Home() {
 
               <div className={styles.userTitle}>{userTitle}</div>
               <div className={styles.userProfDesc}>{userProfDesc}</div>
-
-              <ContactButton />
             </div>
 
             {/* ✅ Use Navbar here */}
@@ -89,10 +88,7 @@ export default function Home() {
             <Projects />
           </section>
 
-          <section
-            id="3d_configurators"
-            className={styles.mainContentConfiguratorSection}
-          >
+          <section id="3d_configurators" className={styles.mainContentConfiguratorSection}>
             <div className={styles.mainSectionHeading}>CONFIGURATORS</div>
             <ConfiguratorPreviewList />
           </section>

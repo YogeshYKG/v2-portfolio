@@ -2,19 +2,13 @@
 
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
-import { useRouter, usePathname, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import styles from "./not-found.module.css";
 import Icon from "./components/svg/Icon";
 
+
 export default function NotFoundComponent() {
   const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
-  // Keep track if ?support=bug is active
-  const [supportActive, setSupportActive] = useState(
-    searchParams.get("support") === "bug"
-  );
 
   // Countdown timer
   const [seconds, setSeconds] = useState(10);
@@ -103,18 +97,6 @@ export default function NotFoundComponent() {
     setBalls((prev) => (prev.length > 1 ? prev.slice(0, -1) : prev));
   };
 
-  // Toggle ?support=bug without reload
-  const handleReportClick = () => {
-    const url = new URL(window.location.href);
-    if (!supportActive) {
-      url.searchParams.set("support", "bug");
-    } else {
-      url.searchParams.delete("support");
-    }
-    window.history.replaceState({}, "", url.toString());
-    setSupportActive(!supportActive);
-  };
-
   return (
     <div className={styles.pageLayout}>
       <h1 className={styles.title}>404 | Something Unexpected Happened</h1>
@@ -153,7 +135,9 @@ export default function NotFoundComponent() {
                   key={ball.id}
                   className={styles.dot}
                   style={{ top: ball.top, left: ball.left }}
-                  onClick={() => setScore((prev) => Math.min(prev + 1, 999))}
+                  onClick={() =>
+                    setScore((prev) => Math.min(prev + 1, 999))
+                  }
                 ></div>
               ))}
             </div>
@@ -162,9 +146,7 @@ export default function NotFoundComponent() {
                 {gamePaused ? "▶ Resume" : "⏸ Pause"}
               </button>
               <button onClick={handleAddBall}>+ Ball</button>
-              {balls.length > 1 && (
-                <button onClick={handleRemoveBall}>- Ball</button>
-              )}
+              {balls.length > 1 && <button onClick={handleRemoveBall}>- Ball</button>}
               <button onClick={() => setGameStarted(false)}>⏹ Stop</button>
             </div>
           </>
@@ -178,9 +160,12 @@ export default function NotFoundComponent() {
             <Icon name="ArrowIcon" size={20} /> Home
           </button>
         </Link>
-        <button className={styles.reportButton} onClick={handleReportClick}>
+        <a
+          href="mailto:support@example.com?subject=404%20Page%20Broken"
+          className={styles.reportButton}
+        >
           Report an Issue
-        </button>
+        </a>
       </div>
     </div>
   );

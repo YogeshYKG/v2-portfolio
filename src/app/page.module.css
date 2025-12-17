@@ -165,10 +165,6 @@
   .navbar {
     display: unset;
   }
-
-  .socialIcons {
-    margin-top: 0rem;
-  }
   .mainSectionHeading {
     display: none;
   }
@@ -190,7 +186,7 @@
   .mainContentSection {
   }
 
-  .mainContentCreditSection {
+  .mainContentCreditSection{
     margin-top: 4.5rem;
   }
 }

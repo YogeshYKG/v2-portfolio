@@ -197,35 +197,33 @@
 }
 
 /* CTA button */
-.contactBtn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.2rem;
-  background-color: var(--text-slate-muted);
-  color: var(--shade-green);
-  border: 2px solid var(--text-slate-muted);
-  border-radius: 0.5rem;
-  font-weight: 540;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  justify-content: center;
-  align-items: center;
-}
+.ctaBtn {
+  padding: 0.9rem 1.8rem;
+  border-radius: 999px;
 
-.contactBtn span {
-  display: inline-block;
-  transition: transform 0.2s ease;
   font-size: 1rem;
+  font-weight: 600;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(200, 200, 200, 0.85)
+  );
+
+  color: #000;
+  border: none;
+  cursor: pointer;
+
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.25),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Slight bouncy effect */
-.contactBtn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  background-color: var(--shade-green);
-  color: var(--text-slate-muted);
-  border: 2px solid var(--text-green);
+.ctaBtn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 16px 40px rgba(255, 255, 255, 0.35),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.2);
 }
 
 /* =========================
