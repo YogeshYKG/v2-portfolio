@@ -6,6 +6,9 @@ src/
 │   │       ├── ConfiguratorPage.js                    
 │   │       ├── page.js                                
 │   │       └── page.module.css                        
+│   ├── api                                     
+│   │   └── contact                    
+│   │       └── route.js                    
 │   ├── archive                                 
 │   │   ├── ArchiveComponent.js                    
 │   │   ├── page.js                                
@@ -77,6 +80,7 @@ src/
 │   │   │   │   ├── plugins                                    
 │   │   │   │   │   ├── AgentPlugin.jsx                      
 │   │   │   │   │   ├── ChatPlugin.jsx                       
+│   │   │   │   │   ├── DonatePlugin.jsx                     
 │   │   │   │   │   ├── FaqPlugin.jsx                        
 │   │   │   │   │   ├── FormPlugin.jsx                       
 │   │   │   │   │   └── Plugin.module.css                    
@@ -88,6 +92,8 @@ src/
 │   │   │   ├── Icon.jsx                    
 │   │   │   ├── Icons                       
 │   │   │   │   ├── ArrowIcon.jsx                               
+│   │   │   │   ├── BeatingHeart.module.css                     
+│   │   │   │   ├── BeatingHeartIcon.jsx                        
 │   │   │   │   ├── BugIcon.jsx                                 
 │   │   │   │   ├── ChatbotIcon.jsx                             
 │   │   │   │   ├── ClipIcon.jsx                                
@@ -99,6 +105,7 @@ src/
 │   │   │   │   ├── GlobeIcon.jsx                               
 │   │   │   │   ├── InstagramIcon.jsx                           
 │   │   │   │   ├── LanguageIcon.jsx                            
+│   │   │   │   ├── LikeIcon.jsx                                
 │   │   │   │   ├── LineIcon.jsx                                
 │   │   │   │   ├── LinkedinIcon.jsx                            
 │   │   │   │   ├── MailIcon.jsx                                
@@ -136,6 +143,7 @@ src/
 │   └── resume                                  
 │       └── page.js                    
 └── scripts                    
+    ├── generateEmailHTML.js                          
     ├── generateFolderStructure.js                    
     └── scripts_outputs                               
         └── folder_structure.txt                    

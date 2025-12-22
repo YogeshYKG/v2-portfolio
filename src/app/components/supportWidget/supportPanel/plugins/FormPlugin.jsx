@@ -3,30 +3,45 @@
 import { useState } from "react";
 import styles from "./Plugin.module.css";
 
-const FORM_ACTION = "https://getform.io/f/bjjdjnqb";
+const FORM_ACTION = "/api/contact";
 
 const FormPlugin = ({ hasAttachment = true }) => {
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setError(null);
 
-    const formData = new FormData(e.target);
+    try {
+      const formData = new FormData(e.target);
+      debugger
 
-    await fetch(FORM_ACTION, {
-      method: "POST",
-      body: formData,
-    });
+      const res = await fetch(FORM_ACTION, {
+        method: "POST",
+        body: formData, // multipart/form-data
+      });
 
-    setDone(true);
-    setLoading(false);
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data?.error || "Submission failed");
+      }
+
+      setDone(true);
+      e.target.reset();
+    } catch (err) {
+      console.error(err);
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (done) {
     return (
-      <div className={styles.success}>
+      <div className={styles.desc}>
         <p>Thanks! 👋</p>
         <p>I’ll get back to you shortly.</p>
       </div>
@@ -48,21 +63,52 @@ const FormPlugin = ({ hasAttachment = true }) => {
     >
       <p className={styles.desc}>{descText}</p>
 
-      <input name="name" placeholder="Your name" required />
-      <input name="email" type="email" placeholder="Email address" required />
+      <input
+        name="name"
+        placeholder="Your name"
+        autoComplete="name"
+      />
+
+      <input
+        name="email"
+        type="email"
+        placeholder="Email address"
+        autoComplete="email"
+        required
+      />
+
       <textarea
         name="message"
         placeholder={textareaPlaceholder}
         required
       />
 
+      {/* 🛑 Honeypot spam protection */}
+      <input
+        type="text"
+        name="honeypot"
+        tabIndex="-1"
+        autoComplete="off"
+        style={{ display: "none" }}
+      />
+
+      {/* Page context (optional but useful) */}
       <input
         type="hidden"
         name="pageURL"
         value={typeof window !== "undefined" ? window.location.href : ""}
       />
 
-      {hasAttachment && <input type="file" name="attachment" />}
+      {/* Optional attachment */}
+      {hasAttachment && (
+        <input
+          type="file"
+          name="attachment"
+          accept=".png,.jpg,.jpeg,.pdf,.txt,.log"
+        />
+      )}
+
+      {error && <p className={styles.error}>{error}</p>}
 
       <button
         type="submit"
