@@ -24,6 +24,8 @@
   border: 1px solid var(--text-mute);
   background: var(--body-background);
   color: var(--text-slate);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .form textarea {
@@ -46,7 +48,6 @@
 }
 
 /* Spinner */
-
 .spinner {
   border: 3px solid rgba(0, 0, 0, 0.1);
   border-left-color: var(--text-slate);
@@ -63,7 +64,6 @@
 }
 
 /* File input */
-
 .form input[type="file"] {
   border-radius: 8px;
   border: 1px solid var(--text-mute);
@@ -78,6 +78,23 @@
   background: var(--shade-green);
   color: var(--text-slate);
   cursor: pointer;
+}
+
+/* ======================
+   Hide number input spinners (critical for clean look)
+====================== */
+.form input[type="number"],
+.form input[inputMode="numeric"] {
+  -moz-appearance: textfield; /* Firefox */
+  appearance: textfield;
+}
+
+.form input[type="number"]::-webkit-outer-spin-button,
+.form input[type="number"]::-webkit-inner-spin-button,
+.form input[inputMode="numeric"]::-webkit-outer-spin-button,
+.form input[inputMode="numeric"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* ======================

@@ -17,7 +17,6 @@ const FormPlugin = ({ hasAttachment = true }) => {
 
     try {
       const formData = new FormData(e.target);
-      debugger
 
       const res = await fetch(FORM_ACTION, {
         method: "POST",
