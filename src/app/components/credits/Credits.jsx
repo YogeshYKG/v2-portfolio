@@ -14,6 +14,14 @@ const Credits = () => {
         >
           Varun Patel
         </a>
+        {" "}and{" "}
+        <a
+          href="https://x.com/PankajM54346308"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Pankaj Maru
+        </a>
         , and built using{" "}
         <a
           href="https://code.visualstudio.com/"

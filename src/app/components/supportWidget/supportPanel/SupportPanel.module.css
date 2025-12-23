@@ -20,9 +20,7 @@
   transform: translateY(12px) scale(0.98);
   pointer-events: none;
 
-  transition:
-    opacity 0.2s ease,
-    transform 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 /* Open */
@@ -72,6 +70,13 @@
   flex: 1;
   padding: 1rem;
   overflow-y: auto;
+  /* Hide scrollbar but keep scrolling */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.body::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
 }
 
 .placeholder {

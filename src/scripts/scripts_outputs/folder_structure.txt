@@ -7,7 +7,9 @@ src/
 │   │       ├── page.js                                
 │   │       └── page.module.css                        
 │   ├── api                                     
-│   │   └── contact                    
+│   │   ├── cold-mail                    
+│   │   │   └── route.js                    
+│   │   └── contact                      
 │   │       └── route.js                    
 │   ├── archive                                 
 │   │   ├── ArchiveComponent.js                    
@@ -78,12 +80,13 @@ src/
 │   │   │   │   └── FloatingLauncher.module.css                    
 │   │   │   ├── supportPanel                                
 │   │   │   │   ├── plugins                                    
-│   │   │   │   │   ├── AgentPlugin.jsx                      
-│   │   │   │   │   ├── ChatPlugin.jsx                       
-│   │   │   │   │   ├── DonatePlugin.jsx                     
-│   │   │   │   │   ├── FaqPlugin.jsx                        
-│   │   │   │   │   ├── FormPlugin.jsx                       
-│   │   │   │   │   └── Plugin.module.css                    
+│   │   │   │   │   ├── AgentPlugin.jsx                       
+│   │   │   │   │   ├── ChatPlugin.jsx                        
+│   │   │   │   │   ├── ColdMailPlugin.jsx                    
+│   │   │   │   │   ├── DonatePlugin.jsx                      
+│   │   │   │   │   ├── FaqPlugin.jsx                         
+│   │   │   │   │   ├── FormPlugin.jsx                        
+│   │   │   │   │   └── Plugin.module.css                     
 │   │   │   │   ├── SupportPanel.jsx                           
 │   │   │   │   └── SupportPanel.module.css                    
 │   │   │   ├── SupportWidget.jsx                           
@@ -143,6 +146,7 @@ src/
 │   └── resume                                  
 │       └── page.js                    
 └── scripts                    
+    ├── generateColdEmailHTML.js                      
     ├── generateEmailHTML.js                          
     ├── generateFolderStructure.js                    
     └── scripts_outputs                               
