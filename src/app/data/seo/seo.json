@@ -39,7 +39,7 @@
     "noindex": false
   },
 
-  "/3d-configurator/mordern-accent-chair": {
+  "/3d-configurator/modern-accent-chair": {
     "title": "Modern Accent Chair 3D Configurator | Yogesh Gupta – Interactive Real-Time Customization",
     "description": "Engage with a dynamic 3D configurator for the modern accent chair, allowing precise modifications to materials, fabrics, and colors. Developed by Yogesh Gupta utilizing React Three Fiber, Drei, and physically based rendering (PBR) for realistic, high-fidelity product demonstrations.",
     "ogImage": "/og/modal2_desktop.webp",

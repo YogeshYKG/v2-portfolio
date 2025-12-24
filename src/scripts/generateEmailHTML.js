@@ -130,7 +130,7 @@ export function generateEmailHTML({
                         </a>
                         </td>
                         <td align="center" style="padding:6px 2px;">
-                        <a href="https://www.yogeshportfolio.in/3d-configurator/mordern-accent-chair"
+                        <a href="https://www.yogeshportfolio.in/3d-configurator/modern-accent-chair"
                             style="display:inline-block;padding:5px 8px;border-radius:6px;
                                     background:#f1f5f9;color:#2563eb;text-decoration:none;
                                     font-size:12px;white-space:nowrap;">

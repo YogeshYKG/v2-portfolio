@@ -46,7 +46,7 @@ const ACTIONS = [
     id: "modern-accent-chair",
     icon: null,
     image: "/thumbnails/modal_thumbnail/modal2_mobile.webp",
-    cta: { type: "route", value: "/3d-configurator/mordern-accent-chair" },
+    cta: { type: "route", value: "/3d-configurator/modern-accent-chair" },
     tooltipLabel: "Modern Accent Chair 3D Configurator",
   },
   {

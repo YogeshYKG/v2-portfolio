@@ -45,7 +45,7 @@ export const ModelCustomizationProvider = (props) => {
     {
       modelId: 1,
       modelLabel: "Modern Accent Chair",
-      slug: "mordern-accent-chair",
+      slug: "modern-accent-chair",
       mobileRotation: [-0.6, 3.7, 0],
       desktopRotation: [-0.2, Math.PI + Math.PI / 12, 0.1],
       textureLabel: "Selected Texture :",

@@ -1,13 +1,11 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import styles from "./ConfiguratorPreviewList.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import Icon from "@/app/components/svg/Icon";
 
 const ConfiguratorPreviewCard = ({ data, status, onActivate }) => {
-  const navigate = useRouter();
   return (
     <div
       className={`${styles.card} ${
@@ -37,16 +35,14 @@ const ConfiguratorPreviewCard = ({ data, status, onActivate }) => {
       </div>
 
       <div className={styles.content}>
-        <button
-          className={`${styles.contactBtn}`}
-          onClick={(e) => {
-            e.stopPropagation(); // important
-            navigate.push(data.sandboxPath);
-          }}
+        <Link
+          href={data.sandboxPath}
+          className={styles.contactBtn}
+          onClick={(e) => e.stopPropagation()}
         >
-          <span>{`View Model`}</span>
+          <span>View Model</span>
           <Icon name="arrow" size={24} color="currentColor" />
-        </button>
+        </Link>
       </div>
     </div>
   );

@@ -189,6 +189,14 @@
   pointer-events: none;
 }
 
+.content a {
+  text-decoration: none;
+}
+
+.content svg {
+  margin-top: 4px;
+}
+
 .activeCard .content {
   opacity: 1;
   visibility: visible;
