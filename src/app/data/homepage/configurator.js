@@ -6,7 +6,7 @@ const armChair = {
 };
 
 const modernAccentChair = {
-  sandboxPath: "/3d-configurator/mordern-accent-chair",
+  sandboxPath: "/3d-configurator/modern-accent-chair",
   thumbnail_desktop: "/thumbnails/modal_thumbnail/modal2_desktop.webp",
   thumbnail_mobile: "/thumbnails/modal_thumbnail/modal2_mobile.webp",
 
