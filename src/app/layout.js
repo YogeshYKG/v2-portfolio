@@ -35,7 +35,25 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/svg/favicon.svg" type="iamge/svg+xml" />
+        <link
+          rel="icon"
+          href="/favicon-48.png"
+          sizes="48x48"
+          type="image/png"
+        />
+        <link
+          rel="icon"
+          href="/favicon-96.png"
+          sizes="96x96"
+          type="image/png"
+        />
+        <link
+          rel="icon"
+          href="/favicon-192.png"
+          sizes="192x192"
+          type="image/png"
+        />
+        <link rel="icon" href="/svg/favicon.svg" type="image/svg+xml" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
