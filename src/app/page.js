@@ -56,6 +56,11 @@ export default function Home() {
                     <Icon name="linkedin" size={24} color="currentColor" />
                   </a>
                 )}
+                {links?.twitter && (
+                  <a href={links.twitter} target="_blank">
+                    <Icon name="twitter" size={24} color="currentColor" />
+                  </a>
+                )}
                 {links?.codepen && (
                   <a href={links.codepen} target="_blank">
                     <Icon name="codepen" size={24} color="currentColor" />

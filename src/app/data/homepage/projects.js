@@ -43,7 +43,7 @@ const vdb = {
 const hrms = {
   thumbnail: "/thumbnails/HRMS_thumbnail.webp",
   title: "Enhanced Internal HRMS",
-  projectLink: "https://raj.nic.in/",
+  projectLink: "https://bges.blueberrygroup.org/",
   contributions:
     "Automated recruitment, attendance, and travel workflows (3k+ employees) with WhatsApp API + email triggers — reducing manual processing by 40%.",
   techStack: ["Angular", "Node", "MySQL", "Jenkins", "Azure"],

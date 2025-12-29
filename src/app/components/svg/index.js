@@ -1,5 +1,6 @@
 export { default as LineIcon } from "@/app/components/svg/Icons/LineIcon";
 export { default as GithubIcon } from "@/app/components/svg/Icons/GithubIcon";
+export { default as XIcon } from "@/app/components/svg/Icons/XIcon";
 export { default as LinkedinIcon } from "@/app/components/svg/Icons/LinkedinIcon";
 export { default as CodepenIcon } from "@/app/components/svg/Icons/CodepenIcon";
 export { default as InstagramIcon } from "@/app/components/svg/Icons/InstagramIcon";
