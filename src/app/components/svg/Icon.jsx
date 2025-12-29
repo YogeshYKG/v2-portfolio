@@ -23,11 +23,13 @@ import {
   SettingIcon,
   LikeIcon,
   BeatingHeartIcon,
+  XIcon
 } from "./index";
 
 const icons = {
   line: LineIcon,
   github: GithubIcon,
+  twitter: XIcon,
   linkedin: LinkedinIcon,
   codepen: CodepenIcon,
   instagram: InstagramIcon,

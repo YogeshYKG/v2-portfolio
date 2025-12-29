@@ -53,6 +53,16 @@ const projectArchive = {
     },
     {
       col1: "2025",
+      col2: "Bottom Funnel",
+      col3: "Techbinary ( Unit of Blueberry Group )",
+      col4: ["Next", "JavaScript", "Modular CSS", "React", "Azure", "MYSQL"],
+      col5: {
+        link: "https://bottomfunnel.net/",
+        label: "bottomfunnel.net",
+      },
+    },
+    {
+      col1: "2025",
       col2: "Enhanced Internal HRMS",
       col3: "Techbinary ( Unit of Blueberry Group )",
       col4: ["Angular", "Websocket.io", "JavaScript", "Node", "Azure", "MYSQL"],
