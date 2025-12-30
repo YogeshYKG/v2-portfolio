@@ -115,7 +115,8 @@ src/
 │   │   │   │   ├── PlaystoreIcon.jsx                           
 │   │   │   │   ├── SettingIcon.jsx                             
 │   │   │   │   ├── TimerIcon.jsx                               
-│   │   │   │   └── UserAddIcon.jsx                             
+│   │   │   │   ├── UserAddIcon.jsx                             
+│   │   │   │   └── XIcon.jsx                                   
 │   │   │   └── index.js                    
 │   │   └── tooltip                                  
 │   │       ├── Tooltip.jsx                           
@@ -146,8 +147,10 @@ src/
 │   └── resume                                  
 │       └── page.js                    
 └── scripts                    
-    ├── generateColdEmailHTML.js                      
-    ├── generateEmailHTML.js                          
-    ├── generateFolderStructure.js                    
-    └── scripts_outputs                               
-        └── folder_structure.txt                    
+    ├── generateColdEmailHTML.js                    
+    ├── generateEmailHTML.js                        
+    ├── scripts_outputs                             
+    │   └── folder_structure.txt                    
+    └── treeScripts                                 
+        ├── generateFolderStructure.js                     
+        └── generateProjectStructure.js                    

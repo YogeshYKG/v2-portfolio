@@ -3,7 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const ROOT_DIR = path.resolve(__dirname, ".."); // project root
+const ROOT_DIR = path.resolve(__dirname, "..", ".."); // project root
 const OUTPUT_DIR = path.join(ROOT_DIR, "scripts", "scripts_outputs");
 const OUTPUT_FILE = path.join(OUTPUT_DIR, "folder_structure.txt");
 
@@ -14,7 +14,7 @@ if (!fs.existsSync(OUTPUT_DIR)) {
 const excludeFileName = ["node_modules", "dist", ".git"];
 
 const commentMap = {
-  "services": "reusable logic Layer containing Microservices",
+  services: "reusable logic Layer containing Microservices",
   "userService.js": "user lookup, validation, password check",
   "sessionService.js": "create, refresh, limit sessions",
   "mfaService.js": "send OTP, verify OTP, TOTP",
