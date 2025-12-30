@@ -1,6 +1,6 @@
 v2-portfolio/
 ├── public                               
-│   ├── models                             
+│   ├── models                                 
 │   │   ├── arm_chair__furniture                           
 │   │   │   ├── textures                       
 │   │   │   │   ├── Base_baseColor.jpeg                           
@@ -29,7 +29,7 @@ v2-portfolio/
 │   │       ├── license.txt                    
 │   │       ├── scene.bin                      
 │   │       └── scene.gltf                     
-│   ├── og                                 
+│   ├── og                                     
 │   │   ├── about.png                              
 │   │   ├── archive.png                            
 │   │   ├── arm-chair.png                          
@@ -41,11 +41,11 @@ v2-portfolio/
 │   │   ├── profile_pic.png                        
 │   │   ├── resume.png                             
 │   │   └── winter-jacket.png                      
-│   ├── resume                             
-│   ├── svg                                
+│   ├── resume                                 
+│   ├── svg                                    
 │   │   ├── 404.svg                        
 │   │   └── favicon.svg                    
-│   ├── texture                            
+│   ├── texture                                
 │   │   ├── texture-001                    
 │   │   │   ├── ambientOcclusion.png                    
 │   │   │   ├── basecolor.png                           
@@ -75,7 +75,7 @@ v2-portfolio/
 │   │       ├── material.png                            
 │   │       ├── normal.png                              
 │   │       └── roughness.png                           
-│   ├── thumbnails                         
+│   ├── thumbnails                             
 │   │   ├── modal_thumbnail                        
 │   │   │   ├── modal1_desktop.webp                    
 │   │   │   ├── modal1_mobile.webp                     
@@ -89,12 +89,15 @@ v2-portfolio/
 │   │   ├── HRMS_thumbnail.webp                    
 │   │   ├── VDB_thumbnail.PNG                      
 │   │   └── VDB_thumbnail.webp                     
-│   ├── favicon-192.png                    
-│   ├── favicon-48.png                     
-│   ├── favicon-96.png                     
-│   ├── resume.pdf                         
-│   ├── robots.txt                         
-│   └── sitemap.xml                        
+│   ├── favicon-192.png                        
+│   ├── favicon-48.png                         
+│   ├── favicon-96.png                         
+│   ├── manifest.json                          
+│   ├── resume.pdf                             
+│   ├── robots.txt                             
+│   ├── sitemap.xml                            
+│   ├── sw.js                                  
+│   └── workbox-4754cb34.js                    
 ├── src                                  
 │   ├── app                        
 │   │   ├── 3d-configurator                         
@@ -245,7 +248,8 @@ v2-portfolio/
 │   │   └── page.module.css                         
 │   └── scripts                    
 │       ├── scripts_outputs                             
-│       │   └── folder_structure.txt                    
+│       │   ├── folder_structure.txt                     
+│       │   └── project_structure.txt                    
 │       ├── treeScripts                                 
 │       │   ├── generateFolderStructure.js                     
 │       │   └── generateProjectStructure.js                    
