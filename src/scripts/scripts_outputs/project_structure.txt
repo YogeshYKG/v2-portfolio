@@ -1,0 +1,262 @@
+v2-portfolio/
+├── public                               
+│   ├── models                             
+│   │   ├── arm_chair__furniture                           
+│   │   │   ├── textures                       
+│   │   │   │   ├── Base_baseColor.jpeg                           
+│   │   │   │   ├── Base_metallicRoughness.png                    
+│   │   │   │   └── Base_normal.jpeg                              
+│   │   │   ├── license.txt                    
+│   │   │   ├── scene.bin                      
+│   │   │   └── scene.gltf                     
+│   │   ├── living_room_sofa__furniture                    
+│   │   │   ├── textures                       
+│   │   │   │   ├── Fabric_baseColor.png                             
+│   │   │   │   ├── Fabric_metallicRoughness.png                     
+│   │   │   │   ├── Leather_baseColor.png                            
+│   │   │   │   ├── Leather_metallicRoughness.png                    
+│   │   │   │   ├── Wood_baseColor.png                               
+│   │   │   │   ├── Wood_metallicRoughness.png                       
+│   │   │   │   └── Wood_normal.png                                  
+│   │   │   ├── license.txt                    
+│   │   │   ├── scene.bin                      
+│   │   │   └── scene.gltf                     
+│   │   └── winter_jacket                                  
+│   │       ├── textures                       
+│   │       │   ├── Coat_baseColor.jpeg                           
+│   │       │   ├── Coat_metallicRoughness.png                    
+│   │       │   └── Coat_normal.png                               
+│   │       ├── license.txt                    
+│   │       ├── scene.bin                      
+│   │       └── scene.gltf                     
+│   ├── og                                 
+│   │   ├── about.png                              
+│   │   ├── archive.png                            
+│   │   ├── arm-chair.png                          
+│   │   ├── contact.png                            
+│   │   ├── home.png                               
+│   │   ├── modal1_desktop.webp                    
+│   │   ├── modal2_desktop.webp                    
+│   │   ├── modal3_desktop.webp                    
+│   │   ├── profile_pic.png                        
+│   │   ├── resume.png                             
+│   │   └── winter-jacket.png                      
+│   ├── resume                             
+│   ├── svg                                
+│   │   ├── 404.svg                        
+│   │   └── favicon.svg                    
+│   ├── texture                            
+│   │   ├── texture-001                    
+│   │   │   ├── ambientOcclusion.png                    
+│   │   │   ├── basecolor.png                           
+│   │   │   ├── height.png                              
+│   │   │   ├── material.png                            
+│   │   │   ├── normal.png                              
+│   │   │   └── roughness.png                           
+│   │   ├── texture-002                    
+│   │   │   ├── ambientOcclusion.png                    
+│   │   │   ├── basecolor.png                           
+│   │   │   ├── height.png                              
+│   │   │   ├── material.png                            
+│   │   │   ├── normal.png                              
+│   │   │   └── roughness.png                           
+│   │   ├── texture-003                    
+│   │   │   ├── ambientOcclusion.png                    
+│   │   │   ├── basecolor.png                           
+│   │   │   ├── height.png                              
+│   │   │   ├── material.png                            
+│   │   │   ├── metallic.png                            
+│   │   │   ├── normal.png                              
+│   │   │   └── roughness.png                           
+│   │   └── texture-004                    
+│   │       ├── ambientOcclusion.png                    
+│   │       ├── basecolor.png                           
+│   │       ├── height.png                              
+│   │       ├── material.png                            
+│   │       ├── normal.png                              
+│   │       └── roughness.png                           
+│   ├── thumbnails                         
+│   │   ├── modal_thumbnail                        
+│   │   │   ├── modal1_desktop.webp                    
+│   │   │   ├── modal1_mobile.webp                     
+│   │   │   ├── modal2_desktop.webp                    
+│   │   │   ├── modal2_mobile.webp                     
+│   │   │   ├── modal3_desktop.webp                    
+│   │   │   └── modal3_mobile.webp                     
+│   │   ├── BBT_thumbnail.PNG                      
+│   │   ├── BBT_thumbnail.webp                     
+│   │   ├── HRMS_thumbnail.png                     
+│   │   ├── HRMS_thumbnail.webp                    
+│   │   ├── VDB_thumbnail.PNG                      
+│   │   └── VDB_thumbnail.webp                     
+│   ├── favicon-192.png                    
+│   ├── favicon-48.png                     
+│   ├── favicon-96.png                     
+│   ├── resume.pdf                         
+│   ├── robots.txt                         
+│   └── sitemap.xml                        
+├── src                                  
+│   ├── app                        
+│   │   ├── 3d-configurator                         
+│   │   │   ├── [model]                    
+│   │   │   │   ├── ConfiguratorPage.js                    
+│   │   │   │   ├── page.js                                
+│   │   │   │   └── page.module.css                        
+│   │   │   └── page.js                    
+│   │   ├── api                                     
+│   │   │   ├── cold-mail                    
+│   │   │   │   └── route.js                    
+│   │   │   └── contact                      
+│   │   │       └── route.js                    
+│   │   ├── archive                                 
+│   │   │   ├── ArchiveComponent.js                    
+│   │   │   ├── page.js                                
+│   │   │   └── page.module.css                        
+│   │   ├── case-study                              
+│   │   │   ├── techbinary                    
+│   │   │   │   ├── page.js                            
+│   │   │   │   └── page.module.css                    
+│   │   │   └── vdb                           
+│   │   │       ├── page.js                            
+│   │   │       └── page.module.css                    
+│   │   ├── components                              
+│   │   │   ├── 3d-models                                
+│   │   │   │   ├── Arm_Chair__Furniture_default.jsx                           
+│   │   │   │   ├── Arm_Chair__Furniture.jsx                                   
+│   │   │   │   ├── Living_Room_Sofa__Furniture_default.jsx                    
+│   │   │   │   ├── Living_Room_Sofa__Furniture.jsx                            
+│   │   │   │   ├── Winter_Jacket_default.jsx                                  
+│   │   │   │   └── Winter_Jacket.jsx                                          
+│   │   │   ├── about                                    
+│   │   │   │   ├── About.jsx                           
+│   │   │   │   └── About.module.css                    
+│   │   │   ├── buttons                                  
+│   │   │   │   └── contactButton                    
+│   │   │   │       ├── ContactButton.jsx                           
+│   │   │   │       └── ContactButton.module.css                    
+│   │   │   ├── configurator-previews                    
+│   │   │   │   ├── ConfiguratorPreviewCard.jsx                           
+│   │   │   │   ├── ConfiguratorPreviewList.jsx                           
+│   │   │   │   └── ConfiguratorPreviewList.module.css                    
+│   │   │   ├── configurator-viewer                      
+│   │   │   │   ├── scene-setup                                      
+│   │   │   │   │   ├── ArmChairScene.jsx                        
+│   │   │   │   │   ├── SofaScene.jsx                            
+│   │   │   │   │   └── WinterJacketScene.jsx                    
+│   │   │   │   ├── ConfiguratorViewer.jsx                           
+│   │   │   │   └── ConfiguratorViewer.module.css                    
+│   │   │   ├── context                                  
+│   │   │   │   └── ModelCustomization.jsx                    
+│   │   │   ├── credits                                  
+│   │   │   │   ├── Credits.jsx                           
+│   │   │   │   └── Credits.module.css                    
+│   │   │   ├── cursorOverlay                            
+│   │   │   │   ├── CursorOverlay.jsx                           
+│   │   │   │   └── CursorOverlay.module.css                    
+│   │   │   ├── experience                               
+│   │   │   │   ├── Experience.jsx                           
+│   │   │   │   ├── Experience.module.css                    
+│   │   │   │   └── ExperienceCard.jsx                       
+│   │   │   ├── footer                                   
+│   │   │   ├── model_configurator                       
+│   │   │   │   ├── ModelConfigurator.jsx                           
+│   │   │   │   └── ModelConfigurator.module.css                    
+│   │   │   ├── navbar                                   
+│   │   │   │   ├── Navbar.jsx                           
+│   │   │   │   └── Navbar.module.css                    
+│   │   │   ├── project_archive_table                    
+│   │   │   │   ├── ProjectArchive.jsx                           
+│   │   │   │   └── ProjectArchive.module.css                    
+│   │   │   ├── projects                                 
+│   │   │   │   ├── ProjectCard.jsx                        
+│   │   │   │   ├── Projects.jsx                           
+│   │   │   │   └── Projects.module.css                    
+│   │   │   ├── supportWidget                            
+│   │   │   │   ├── floatinglauncher                            
+│   │   │   │   │   ├── FloatingLauncher.jsx                           
+│   │   │   │   │   └── FloatingLauncher.module.css                    
+│   │   │   │   ├── supportPanel                                
+│   │   │   │   │   ├── plugins                                    
+│   │   │   │   │   │   ├── AgentPlugin.jsx                       
+│   │   │   │   │   │   ├── ChatPlugin.jsx                        
+│   │   │   │   │   │   ├── ColdMailPlugin.jsx                    
+│   │   │   │   │   │   ├── DonatePlugin.jsx                      
+│   │   │   │   │   │   ├── FaqPlugin.jsx                         
+│   │   │   │   │   │   ├── FormPlugin.jsx                        
+│   │   │   │   │   │   └── Plugin.module.css                     
+│   │   │   │   │   ├── SupportPanel.jsx                           
+│   │   │   │   │   └── SupportPanel.module.css                    
+│   │   │   │   ├── SupportWidget.jsx                           
+│   │   │   │   └── SupportWidget.module.css                    
+│   │   │   ├── svg                                      
+│   │   │   │   ├── Icons                       
+│   │   │   │   │   ├── ArrowIcon.jsx                               
+│   │   │   │   │   ├── BeatingHeart.module.css                     
+│   │   │   │   │   ├── BeatingHeartIcon.jsx                        
+│   │   │   │   │   ├── BugIcon.jsx                                 
+│   │   │   │   │   ├── ChatbotIcon.jsx                             
+│   │   │   │   │   ├── ClipIcon.jsx                                
+│   │   │   │   │   ├── CodepenIcon.jsx                             
+│   │   │   │   │   ├── ConfiguratorIcon.jsx                        
+│   │   │   │   │   ├── CurrencyExchangeIcon.jsx                    
+│   │   │   │   │   ├── ErrorIcon.jsx                               
+│   │   │   │   │   ├── GithubIcon.jsx                              
+│   │   │   │   │   ├── GlobeIcon.jsx                               
+│   │   │   │   │   ├── InstagramIcon.jsx                           
+│   │   │   │   │   ├── LanguageIcon.jsx                            
+│   │   │   │   │   ├── LikeIcon.jsx                                
+│   │   │   │   │   ├── LineIcon.jsx                                
+│   │   │   │   │   ├── LinkedinIcon.jsx                            
+│   │   │   │   │   ├── MailIcon.jsx                                
+│   │   │   │   │   ├── PlaystoreIcon.jsx                           
+│   │   │   │   │   ├── SettingIcon.jsx                             
+│   │   │   │   │   ├── TimerIcon.jsx                               
+│   │   │   │   │   ├── UserAddIcon.jsx                             
+│   │   │   │   │   └── XIcon.jsx                                   
+│   │   │   │   ├── Icon.jsx                    
+│   │   │   │   └── index.js                    
+│   │   │   └── tooltip                                  
+│   │   │       ├── Tooltip.jsx                           
+│   │   │       └── Tooltip.module.css                    
+│   │   ├── data                                    
+│   │   │   ├── archive                     
+│   │   │   │   └── projectArchive.js                    
+│   │   │   ├── homepage                    
+│   │   │   │   ├── about.js                           
+│   │   │   │   ├── configurator.js                    
+│   │   │   │   ├── experience.js                      
+│   │   │   │   ├── projects.js                        
+│   │   │   │   └── userInfo.js                        
+│   │   │   ├── schema                      
+│   │   │   │   └── schema.json                    
+│   │   │   └── seo                         
+│   │   │       ├── seo.js                      
+│   │   │       └── seo.json                    
+│   │   ├── projects                                
+│   │   │   └── page.js                    
+│   │   ├── resume                                  
+│   │   │   └── page.js                    
+│   │   ├── globals.css                             
+│   │   ├── layout.js                               
+│   │   ├── not-found.js                            
+│   │   ├── not-found.module.css                    
+│   │   ├── notFound.js                             
+│   │   ├── page.js                                 
+│   │   └── page.module.css                         
+│   └── scripts                    
+│       ├── scripts_outputs                             
+│       │   └── folder_structure.txt                    
+│       ├── treeScripts                                 
+│       │   ├── generateFolderStructure.js                     
+│       │   └── generateProjectStructure.js                    
+│       ├── generateColdEmailHTML.js                    
+│       └── generateEmailHTML.js                        
+├── .env.local                           
+├── .gitignore                           
+├── eslint.config.mjs                    
+├── jsconfig.json                        
+├── next-env.d.ts                        
+├── next.config.mjs                      
+├── package-lock.json                    
+├── package.json                         
+└── README.md                            

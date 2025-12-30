@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "tree": "node src/scripts/generateFolderStructure.js",
+    "f-tree": "node src/scripts/treeScripts/generateFolderStructure.js",
+    "p-tree": "node src/scripts/treeScripts/generateProjectStructure.js",
     "analyze": "cross-env ANALYZE=true next build"
   },
   "dependencies": {
